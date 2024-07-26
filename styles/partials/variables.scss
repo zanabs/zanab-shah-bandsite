@@ -67,15 +67,6 @@ $font-weight__body-footer__mobile:$font-weight__body-footer;
 $font-weight__labels-buttons__mobile:$font-weight__labels-buttons;
 
 
-
-
-
-
-
-
-
-
-
     //form field styling 
 
 $form-field-height__mobile: 2.25rem;
@@ -104,14 +95,53 @@ $table-row-hover:$secondary-color__3;
     //avatar image styling
 
 $avatar-border-radius: 50%;
-
 $avatar__desktop-tablet-max-width-height: 3rem;
 $avatar__mobile-max-width-height: 2.25rem;
 $avatar-placeholder:$secondary-color__2;
 
     //hero image colors, opacity and other styling 
 
-$overlay__hero: #50323232
+$overlay__hero: #50323232;
+
+    //BandSite logo styling 
+
+$BandSite-logo__background: $primary-color__1;
+$BandSite-logo__max-height: 1.25rem;
+$BandSite-logo__max-width: 7.5rem;
+$BandSite-logo__text: $primary-color__3;
+
+    //social icons styling 
+$socials__bakcground:$primary-color__1;
+
+    //Call to Action (CTA) button styling 
+
+$CTA-height:2.5rem;
+$CTA-min-width__desktop-tablet:9.375rem;
+$CTA-min-padding__desktop-tablet: 0rem 2rem 0rem 2rem;
+$CTA-width__mobile:100%;
+$CTA-radius: .25rem;
+
+    //Call to Action (CTA) button styling in different states
+$CTA-default__background: $primary-color__1; 
+$CTA-default__text:$primary-color__3;
+
+$CTA-hover__background: $secondary-color__1;
+$CTA-hover__text:$CTA-default__text;
+
+    //Link styles across various states 
+$active-link__color: $primary-color__3;
+$active-link__weight: 700;
+
+$inactive-link__color: $secondary-color__2;
+$inactive-link__weight: 400;
+
+$hover-link__color: $active-link__color; 
+$hover-link__weight: $inactive-link__weight;
+
+
+
+
+
 
 
 
