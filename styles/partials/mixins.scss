@@ -259,22 +259,28 @@
 }
 
 
-    //display properties 
-@mixin navigation__desktop-tablet {
-    display: flex;
-    flex-direction: row;
-}
+    //display properties for nav, footer, body (mobile)
 @mixin navigation__mobile {
     display: flex;
     flex-direction: column;
 }
-
-@mixin footer__desktop-tablet {
+@mixin footer__mobile {
     display: flex;
     flex-direction: column;
 }
 
-@mixin footer__navigation {
+@mixin body {
+    display:flex;
+    flex-direction: column;
+}
+
+    //display properties for nav, footer, body (desktop & tablet )
+
+@mixin navigation__desktop-tablet {
+    display: flex;
+    flex-direction: row;
+}
+@mixin footer__desktop-tablet {
     display: flex;
     flex-direction: column;
 }
@@ -293,6 +299,20 @@
 @mixin headline-padding__mobile {
     padding: 1.5rem 1rem 1rem 1rem;
 }
+
+    //media queries 
+
+@media screen and (min-width: 80rem) 
+    {
+
+}
+
+@media screen and (min-width: 48rem) and (max-width: 79.9375rem) 
+    {
+    
+}
+
+
 
 
 
