@@ -9,6 +9,14 @@
     font-size: 1.5rem;
 }
 
+    //hero image styling 
+
+@mixin hero-style{
+    background-color: $overlay__hero;
+    width:100%;
+
+}
+
     //link styling across various states 
 
 @mixin active-link{
@@ -143,5 +151,122 @@
     max-width: $avatar__mobile-max-width-height;
     max-height: $avatar__mobile-max-width-height;
 }
+
+    //table styling across various states 
+
+@mixin default-table {
+    padding: $default-table-row__desktop-tablet;
+    background-color: $primary-color__3;
+}
+
+@mixin defualt-table__mobile{
+    padding: $default-table-row__mobile;
+    background-color: $primary-color__3;
+}
+
+@mixin selected-table {
+    background-color: $table-row-selected;
+
+}
+
+@mixin hover-table {
+    background-color: $table-row-hover;
+}
+
+    //field forms 
+@mixin default-field-form {
+    height: $form-field-height__desktop-tablet;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__default;
+    width: $form-field-width;
+    padding: $form-field-padding__desktop-tablet;
+
+
+}
+
+@mixin filled-field-form {
+    height: $form-field-height__desktop-tablet;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__default;
+    width: $form-field-width;
+    padding: $form-field-padding__desktop-tablet;
+    
+}
+
+@mixin active-field-form {
+    height: $form-field-height__desktop-tablet;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__active;
+    width: $form-field-width;
+    padding: $form-field-padding__desktop-tablet;
+}
+
+@mixin error-field-form {
+    height: $form-field-height__desktop-tablet;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__error;
+    width: $form-field-width;
+    padding: $form-field-padding__desktop-tablet;
+}
+
+@mixin default-field-form__mobile {
+    height: $form-field-height__mobile;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__default;
+    width: $form-field-width;
+    padding: $form-field-padding__mobile;
+}
+
+@mixin filled-field-form__mobile {
+    height: $form-field-height__mobile;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__default;
+    width: $form-field-width;
+    padding: $form-field-padding__mobile;
+    
+}
+
+@mixin active-field-form {
+    height: $form-field-height__mobile;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__active;
+    width: $form-field-width;
+    padding: $form-field-padding__mobile;
+}
+
+@mixin error-field-form {
+    height: $form-field-height__mobile;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__error;
+    width: $form-field-width;
+    padding: $form-field-padding__mobile;
+}
+
+
+
+
+
+
+
+    //display properties 
+
+
+
 
 
