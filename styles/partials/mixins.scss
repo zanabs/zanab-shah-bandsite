@@ -159,7 +159,7 @@
     background-color: $primary-color__3;
 }
 
-@mixin defualt-table__mobile{
+@mixin default-table__mobile{
     padding: $default-table-row__mobile;
     background-color: $primary-color__3;
 }
@@ -259,13 +259,40 @@
 }
 
 
-
-
-
-
-
     //display properties 
+@mixin navigation__desktop-tablet {
+    display: flex;
+    flex-direction: row;
+}
+@mixin navigation__mobile {
+    display: flex;
+    flex-direction: column;
+}
 
+@mixin footer__desktop-tablet {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin footer__navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+    //divider(s)
+@mixin divider-style {
+    stroke-width: .0625rem;
+    color: $secondary-color__2;
+}
+
+    //padding 
+@mixin headline-padding {
+    padding: 3rem 1rem 2.25rem 1rem;
+}
+
+@mixin headline-padding__mobile {
+    padding: 1.5rem 1rem 1rem 1rem;
+}
 
 
 
