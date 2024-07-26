@@ -1,0 +1,130 @@
+    //colors 
+
+$primary-color__1:#323232; 
+//BandSite-Black: Primary text color for dark on light background. Dark background color
+
+$primary-color__2:#afafaf;
+//Silver: Seconday text color. Inactive CTA text color
+
+$primary-color__3: #ffffff;
+//White: Primary text color for light on dark background. Light background color. Active CTA text color.
+
+$secondary-color__1:#000000;
+//BandSite-DarkBlack: CTA hover state.
+
+$secondary-color__2:#e1e1e1;
+//Mercury: Divider line. Form field outline. 
+
+$secondary-color__3:#fafafa;
+//Alabaster: Alternative light background color.
+
+$error-color:#d22d2d;
+//error color 
+
+
+    //typography (size)
+
+$text-size__page-header: 3.75rem;
+$text-size__section-header:2.25rem;
+$text-size__subheader:1.5rem;
+$text-size__body-copy:.875rem;
+$text-size__footer-copy: .875rem;
+$text-size__labels-buttons: .75rem;
+
+$text-size__page-header__mobile: 1.5rem;
+$text-size__section-header__mobile: 1.5rem;
+$text-size__subheader__mobile:.875rem;
+$text-size__body-copy__mobile:.8125rem;
+$text-size__footer-copy__mobile: .8125rem; 
+$text-size__labels-buttons__mobile: .625rem;
+
+    //typography (line height) 
+
+$line-height__page-header:4.25rem;
+$line-height__section-header:2.75rem;
+$line-height__sub-header:2rem;
+$line-height__body-copy:.875rem;
+$line-height__footer-copy:1.25rem;
+$line-height__labels-buttons: 1.25rem;
+
+$line-height__page-header__mobile:2rem;
+$line-height__section-header__mobile:2rem;
+$line-height__sub-header__mobile:1.375rem; 
+$line-height__body-copy__mobile:1.125rem;
+$line-height__footer-copy__mobile:1.125rem;
+$line-height__labels-buttons__mobile: 1.25rem;
+
+    //typography (font weight)
+
+$font-weight__page-section-header: 700;
+$font-weight__subheader:600;
+$font-weight__body-footer:400;
+$font-weight__labels-buttons:$font-weight__page-section-header; 
+
+$font-weight__page-section-header__mobile:$font-weight__page-section-header;
+$font-weight__subheader__mobile:$font-weight__subheader;
+$font-weight__body-footer__mobile:$font-weight__body-footer;
+$font-weight__labels-buttons__mobile:$font-weight__labels-buttons;
+
+
+
+
+
+
+
+
+
+
+
+    //form field styling 
+
+$form-field-height__mobile: 2.25rem;
+$form-field-height__desktop-tablet: 48px;
+$form-field-radius: .25rem;
+$form-field-width: 100%; 
+
+$form-field-padding__mobile: .75rem;
+$form-field-padding__desktop-tablet: 16px;
+
+$field-label-form-margin: .25rem;
+
+$form-field-border__default: 0.0625rem $secondary-color__2;
+$form-field-border__active: 0.0625rem $primary-color__1;
+$form-field-border__error:0.0625rem $error-color; 
+
+    //default table row styling 
+
+$default-table-row__desktop-tablet: 1.5rem 1.125rem 1.5rem 1.125rem;
+$default-table-row__mobile:1rem; 
+
+$table-row-selected:$secondary-color__2;
+$table-row-hover:$secondary-color__3;
+
+
+    //avatar image styling
+
+$avatar-border-radius: 50%;
+
+$avatar__desktop-tablet-max-width-height: 3rem;
+$avatar__mobile-max-width-height: 2.25rem;
+$avatar-placeholder:$secondary-color__2;
+
+    //hero image colors, opacity and other styling 
+
+$overlay__hero: #50323232
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
