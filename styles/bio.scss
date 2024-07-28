@@ -1,7 +1,6 @@
 @use './partials/mixins.scss' as *;
 @use './partials/variables.scss' as *;
 
-
 .header {
     @include typography__page-header;
 }
