@@ -1,0 +1,77 @@
+body {
+  margin: 0%;
+}
+
+.header {
+  background-color: #323232;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  margin-bottom: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+}
+nav h2 {
+  margin: 0%;
+}
+
+.cover__container {
+  background-image: url(../assets/Images/hero-bio.jpg);
+  background-size: cover;
+}
+
+.overlay {
+  background-color: rgba(80, 50, 50, 0.5);
+  color: white;
+  padding: 18% 5%;
+}
+
+.about__container {
+  margin: 5%;
+}
+
+.image__style {
+  width: 100%;
+  size: cover;
+}
+
+.gallery {
+  background-color: #fafafa;
+  padding: 3% 0%;
+}
+
+.gallery__content {
+  margin: 5%;
+}
+
+.gallery__photos {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 1rem;
+}
+
+.footer-background {
+  background-color: #323232;
+}
+
+footer {
+  margin: 0% 5% 5% 5%;
+  padding: 5% 0% 5% 0%;
+  background-color: #323232;
+  color: white;
+}/*# sourceMappingURL=bio.css.map */

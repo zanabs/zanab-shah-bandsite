@@ -1,7 +1,61 @@
 @use './partials/mixins.scss' as *;
 @use './partials/variables.scss' as *;
+@use './partials/global.scss' as *;
+
 
 .header {
-    @include typography__page-header;
+
+    @include header-footer-background;
+    @include typography__page-header__mobile;
+    @include logo;
+}
+nav {
+    margin-bottom: 0%;
+    @include navigation__mobile;
+    @include inactive-link;
+        h2 {
+            margin:0%;
+        }
 }
 
+.cover__container {
+    @include hero-background;
+
+}
+
+.overlay {
+    @include overlay; 
+}
+
+.about__container {
+    @include container-width;
+}
+
+.image__style {
+    @include image__style;
+}
+
+.gallery {
+    background-color: $secondary-color__3;
+    padding: 3% 0%;
+
+}
+
+.gallery__content {
+    @include container-width;
+}
+
+.gallery__photos {
+    @include gallery__photos;
+}
+
+.footer-background {
+    @include header-footer-background;
+}
+
+footer {
+    margin:0% 5% 5% 5%;
+    padding: 5% 0% 5% 0%;
+    @include header-footer-background;
+    color: white;
+}

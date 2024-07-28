@@ -1,4 +1,7 @@
-    //BandSite logo styling 
+   
+   @use './variables.scss' as *;
+   
+   //BandSite logo styling 
 
 @mixin BandSite-logo-styling{
     background-color: $BandSite-logo__background;
@@ -11,10 +14,17 @@
 
     //hero image styling 
 
-@mixin hero-style{
-    background-color: $overlay__hero;
-    width:100%;
+@mixin overlay {
+    background-color:$overlay__hero;
+    color: white;
+    padding: 18% 5%;
 
+}
+
+@mixin hero-background{
+    background-image: url(../assets/Images/hero-bio.jpg);
+    background-size: cover;
+ 
 }
 
     //link styling across various states 
@@ -23,6 +33,7 @@
     color:$active-link__color;
     font-weight: $active-link__weight;
     text-decoration: underline;
+    text-underline-offset: .5rem;
     text-decoration-color: $active-link__color;
     text-decoration-thickness: 400;
 
@@ -30,9 +41,10 @@
 }
     
 @mixin inactive-link{
-    color:$inactive-link__color;
+    color:$active-link__color;
     font-weight: $inactive-link__weight;
     text-decoration: underline;
+    text-underline-offset: 20px;
     text-decoration-color: $active-link__color;
 }
     
@@ -46,12 +58,22 @@
     //typography 
 
 @mixin typography__page-header {
-    color: $primary-color__1;
+    color: $primary-color__2;
     font-size: $text-size__page-header;
     font-weight: $font-weight__page-section-header;
-    font-family: avenir;
+    font-family: 'Times New Roman', Times, serif;
     line-height: $line-height__page-header;
 }
+
+@mixin typography__page-header__mobile {
+    color: $primary-color__3;
+    font-size: $text-size__page-header__mobile;
+    font-weight: $font-weight__page-section-header__mobile;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: $line-height__page-header__mobile;
+}
+
+
 
 @mixin typography__section-header {
     color: $primary-color__1;
@@ -59,6 +81,14 @@
     font-weight:$font-weight__page-section-header;
     font-family: avenir;
     line-height: $line-height__section-header;
+}
+
+@mixin typography__section-header__mobile {
+    color: $primary-color__1;
+    font-size: $text-size__section-header__mobile;
+    font-weight:$font-weight__page-section-header__mobile;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: $line-height__section-header__mobile;
 }
 
 @mixin typography__subheader {
@@ -69,29 +99,66 @@
     line-height: $line-height__sub-header;
 }
 
+@mixin typography__subheader__mobile {
+    color: $primary-color__1;
+    font-size: $text-size__subheader__mobile;
+    font-weight: $font-weight__subheader__mobile;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: $line-height__sub-header__mobile;
+}
+
 @mixin typography__body-copy {
     color: $primary-color__1;
     font-size: $text-size__body-copy;
     font-weight: $font-weight__body-footer;
-    font-family:avenir;
+    font-family: 'Times New Roman', Times, serif;
     line-height:$line-height__body-copy; 
+}
+
+@mixin typography__body-copy__mobile {
+    color: $primary-color__1;
+    font-size: $text-size__body-copy__mobile;
+    font-weight: $font-weight__body-footer__mobile;
+    font-family: 'Times New Roman', Times, serif;
+    line-height:$line-height__body-copy__mobile; 
 }
 
 @mixin typography__footer-copy {
     color:$primary-color__2;
     font-size: $text-size__footer-copy;
     font-weight: $font-weight__body-footer;
-    font-family: avenir;
+    font-family: 'Times New Roman', Times, serif;
     line-height: $line-height__footer-copy;
+}
+
+@mixin typography__footer-copy__mobile {
+    color:$primary-color__2;
+    font-size: $text-size__footer-copy__mobile;
+    font-weight: $font-weight__body-footer__mobile;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: $line-height__footer-copy__mobile;
 }
 
 @mixin typography__labels-buttons {
     color: $primary-color__2;
     font-size: $text-size__labels-buttons;
     font-weight: $font-weight__labels-buttons;
-    font-family: avenir;
+    font-family: 'Times New Roman', Times, serif;
     line-height: $line-height__labels-buttons; 
+
 }
+
+@mixin typography__labels-buttons__mobile {
+    color: $primary-color__2;
+    font-size: $text-size__labels-buttons__mobile;
+    font-weight: $font-weight__labels-buttons__mobile;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: $line-height__labels-buttons__mobile; 
+
+}
+
+
+
 
     //cta button styling across various states 
 
@@ -260,19 +327,50 @@
 
 
     //display properties for nav, footer, body (mobile)
-@mixin navigation__mobile {
+
+@mixin header-footer-background {
+    background-color: $primary-color__1;
+}
+
+@mixin logo {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+@mixin navigation__mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
 }
 @mixin footer__mobile {
     display: flex;
     flex-direction: column;
 }
 
+@mixin container-width {
+    margin:5%;
+}
+
 @mixin body {
     display:flex;
     flex-direction: column;
 }
+
+@mixin image__style{
+    width:100%;
+    size: cover;
+
+}
+
+@mixin gallery__photos {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    gap: 1rem;
+}
+
 
     //display properties for nav, footer, body (desktop & tablet )
 

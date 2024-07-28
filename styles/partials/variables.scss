@@ -101,7 +101,7 @@ $avatar-placeholder:$secondary-color__2;
 
     //hero image colors, opacity and other styling 
 
-$overlay__hero: #50323232;
+$overlay__hero: rgba(80, 50, 50, 0.5);
 
     //BandSite logo styling 
 
@@ -132,7 +132,7 @@ $CTA-hover__text:$CTA-default__text;
 $active-link__color: $primary-color__3;
 $active-link__weight: 700;
 
-$inactive-link__color: $secondary-color__2;
+$inactive-link__color: $primary-color__3;
 $inactive-link__weight: 400;
 
 $hover-link__color: $active-link__color; 
