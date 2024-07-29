@@ -31,13 +31,6 @@ $text-size__body-copy:.875rem;
 $text-size__footer-copy: .875rem;
 $text-size__labels-buttons: .75rem;
 
-$page-header__mobile: 2rem;
-$nav-links__mobile: 1rem;
-$section-header__mobile: 2rem;
-$subheader__mobile:1.1rem;
-$body-copy__mobile:1rem;
-$text-size__footer-copy__mobile: .8125rem; 
-$text-size__labels-buttons__mobile: .625rem;
 
     //typography (line height) 
 
@@ -47,14 +40,6 @@ $line-height__sub-header:1.5rem;
 $line-height__body-copy:.875rem;
 $line-height__footer-copy:1.8rem;
 $line-height__labels-buttons: 1.25rem;
-
-$line-height__page-header__mobile:2rem;
-$line-height__section-header__mobile:2rem;
-$line-height__sub-header__mobile:1.375rem; 
-$line-height__body-copy__mobile:2rem;
-$line-height__footer-copy__mobile:1.8rem;
-$line-height__labels-buttons__mobile: 1.25rem;
-
 $section-header__padding-top: 1.5rem;
 $section-header__padding-top-tablet: 3rem;
 $section-header__margin-bottom: 1rem;
@@ -68,7 +53,14 @@ $font-weight-regular: 400;
 $font-weight-demi: 600;
 $font-weight-bold: 700;
 
+  //hero image colors, opacity and other styling 
 
+  $overlay__hero: rgba(80, 50, 50, 0.5);
+
+//padding increments 
+
+$headline__mobile: 1.5rem 0rem 0rem 0rem;
+$between-components: 1rem 0rem 0rem 0rem;
 
 
 
@@ -104,9 +96,7 @@ $avatar__desktop-tablet-max-width-height: 3rem;
 $avatar__mobile-max-width-height: 2.25rem;
 $avatar-placeholder:$secondary-color__2;
 
-    //hero image colors, opacity and other styling 
-
-$overlay__hero: rgba(80, 50, 50, 0.5);
+  
 
     //BandSite logo styling 
 
@@ -143,8 +133,23 @@ $inactive-link__weight: 400;
 $hover-link__color: $active-link__color; 
 $hover-link__weight: $inactive-link__weight;
 
-$headline__mobile: 1.5rem 0rem 0rem 0rem;
-$between-components: 1rem 0rem 0rem 0rem;
+
+$page-header__mobile: 2rem;
+$nav-links__mobile: 1rem;
+$section-header__mobile: 2rem;
+$subheader__mobile:1.1rem;
+$body-copy__mobile:1rem;
+$text-size__footer-copy__mobile: .8125rem; 
+$text-size__labels-buttons__mobile: .625rem;
+
+
+$line-height__page-header__mobile:2rem;
+$line-height__section-header__mobile:2rem;
+$line-height__sub-header__mobile:1.375rem; 
+$line-height__body-copy__mobile:2rem;
+$line-height__footer-copy__mobile:1.8rem;
+$line-height__labels-buttons__mobile: 1.25rem;
+
 
 
 
