@@ -7,18 +7,22 @@ body {
 //font-types 
 
 @font-face {
-    font-family: AvenirRegular;
+    font-family: AvenirNext;
     src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
-
+    src: url(../assets/Font/AvenirNextLTPro.ttf) format("truetype");
+    font-weight: 400;
 } 
 
-
 @font-face {
-    font-family: AvenirDemi;
+    font-family: AvenirNext;
     src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
+    src: url(../assets/Font/AvenirNextLTProDemi.ttf) format("truetype");
+    font-weight: 600;
 }
 
 @font-face {
-    font-family: AvenirBold;
+    font-family: AvenirNext;
     src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
+    src: url(../assets/Font/AvenirNextLTProBold.ttf) format("truetype");
+    font-weight: 700;
 }

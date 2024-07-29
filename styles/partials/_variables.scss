@@ -26,7 +26,7 @@ $error-color:#d22d2d;
 
 $text-size__page-header: 3.75rem;
 $text-size__section-header:2.25rem;
-$text-size__subheader:1.5rem;
+$text-size__subheader: 1.1rem;
 $text-size__body-copy:.875rem;
 $text-size__footer-copy: .875rem;
 $text-size__labels-buttons: .75rem;
@@ -43,23 +43,30 @@ $text-size__labels-buttons__mobile: .625rem;
 
 $line-height__page-header:4.25rem;
 $line-height__section-header:2.75rem;
-$line-height__sub-header:2rem;
+$line-height__sub-header:1.5rem;
 $line-height__body-copy:.875rem;
-$line-height__footer-copy:1.25rem;
+$line-height__footer-copy:1.8rem;
 $line-height__labels-buttons: 1.25rem;
 
 $line-height__page-header__mobile:2rem;
 $line-height__section-header__mobile:2rem;
 $line-height__sub-header__mobile:1.375rem; 
 $line-height__body-copy__mobile:2rem;
-$line-height__footer-copy__mobile:1.125rem;
+$line-height__footer-copy__mobile:1.8rem;
 $line-height__labels-buttons__mobile: 1.25rem;
+
+$section-header__padding-top: 1.5rem;
+$section-header__padding-top-tablet: 3rem;
+$section-header__margin-bottom: 1rem;
+$section-header__margin-bottom-tablet: 2rem;
 
     //typography (font weight)
 
-$font-regular: 'AvenirRegular';
-$font-demi: 'AvenirDemi';
-$font-bold: 'AvenirBold';
+$font-regular: 'AvenirNext';
+
+$font-weight-regular: 400;
+$font-weight-demi: 600;
+$font-weight-bold: 700;
 
 
 
