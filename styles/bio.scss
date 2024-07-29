@@ -95,14 +95,21 @@ nav {
 
 .gallery__photos {
 	@include gallery__photos;
+    
 
 	.image__style {
 		@include tablet {
 			width: calc(33% - (2rem * 2/3));
 		}
+        filter:grayscale(100%);
+
 	}
+    .image__style:hover {
+        filter: grayscale(0%);
+    }
 
 }
+
 
 .footer-style {
 	@include header-footer-background;

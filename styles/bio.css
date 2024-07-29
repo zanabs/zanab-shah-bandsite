@@ -352,10 +352,16 @@ nav a:hover {
     gap: 32px;
   }
 }
+.gallery__photos .image__style {
+  filter: grayscale(100%);
+}
 @media screen and (min-width: 767px) {
   .gallery__photos .image__style {
     width: calc(33% - 1.3333333333rem);
   }
+}
+.gallery__photos .image__style:hover {
+  filter: grayscale(0%);
 }
 
 .footer-style {
