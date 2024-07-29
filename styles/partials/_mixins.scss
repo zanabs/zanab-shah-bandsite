@@ -1,23 +1,24 @@
-   
+   @use './global.scss' as *;
    @use './variables.scss' as *;
    
    //BandSite logo styling 
 
-@mixin BandSite-logo-styling{
-    background-color: $BandSite-logo__background;
-    color: $BandSite-logo__text;
-    max-width: $BandSite-logo__max-width;
-    max-height: $BandSite-logo__max-height;
-    font-weight: 400;
-    font-size: 1.5rem;
+@mixin logo {
+    max-width: 7.5rem;
+    max-height: 1.25rem;
+    padding: $headline__mobile;
 }
 
     //hero image styling 
 
 @mixin overlay {
     background-color:$overlay__hero;
-    color: white;
+    color: $primary-color__3;
     padding: 18% 5%;
+        h1{
+            font-family: 'AvenirDemi';
+            font-size:$page-header__mobile;
+        }
 
 }
 
@@ -26,6 +27,90 @@
     background-size: cover;
  
 }
+
+@mixin typography-about__title {
+    font-family: $font-demi;
+    font-size: $section-header__mobile;
+    color: $primary-color__1;
+    padding: $headline__mobile;
+    margin: 0%;
+
+}
+
+@mixin typography-about__quote {
+    font-family: $font-demi;
+    font-size: $subheader__mobile;
+    color: $primary-color__1;
+    line-height: $line-height__body-copy__mobile;
+    padding: $between-components;
+        p{
+            margin:0%;
+        }
+
+
+}
+
+@mixin typography__intro-title {
+    font-family: $font-regular;
+    color: $secondary-color__1;
+    font-size: $subheader__mobile;
+    line-height: 1.3rem;
+    padding: $headline__mobile;
+        margin:0%;
+}
+
+@mixin typography__intro-body {
+        font-family: $font-regular;
+        color: $primary-color__1;
+        font-size: $body-copy__mobile;
+        line-height: 1.8rem;
+        padding: $between-components;
+            margin:0%;
+}
+
+@mixin gallery {
+    background-color: $secondary-color__3;
+        p {
+            margin:0%;
+            font-size: $section-header__mobile;
+            font-family: $font-demi;
+            padding: $headline__mobile;
+            color: $primary-color__1;
+        }
+}
+
+@mixin typography__footer-contact {
+    font-family: $font-demi;
+    font-size: $subheader__mobile;
+
+}
+
+@mixin contact {
+    display: flex;
+    flex-direction: column;
+        h1 {
+            margin:0%;
+            padding: $headline__mobile;
+        }
+        .socials {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 40%;
+            padding: $between-components;
+        }
+}
+
+@mixin booking-links {
+    font-family: $font-regular;
+    font-size: $subheader__mobile;
+    line-height: $line-height__footer-copy__mobile;
+        .booking-title {
+            font-family: $font-demi;
+            padding: $between-components;
+        }
+}
+
 
     //link styling across various states 
 
@@ -57,20 +142,48 @@
     
     //typography 
 
-@mixin typography__page-header {
-    color: $primary-color__2;
-    font-size: $text-size__page-header;
-    font-weight: $font-weight__page-section-header;
-    font-family: 'Times New Roman', Times, serif;
-    line-height: $line-height__page-header;
-}
 
 @mixin typography__page-header__mobile {
     color: $primary-color__3;
     font-size: $text-size__page-header__mobile;
-    font-weight: $font-weight__page-section-header__mobile;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'AvenirRegular';
     line-height: $line-height__page-header__mobile;
+}
+
+@mixin typography__nav {
+    color: $primary-color__2;
+    font-size: $nav-links__mobile;
+    font-family: 'AvenirRegular';
+    line-height: $line-height__page-header__mobile;
+
+        .main-link {
+            color:$primary-color__3;
+            font-family:'AvenirDemi';
+            box-sizing: border-box;
+            border-bottom: solid 3px $primary-color__3;
+            width:100%;
+
+
+        }
+
+        a{  text-align:center;
+            width: 100%;
+            padding-bottom:2%;
+            margin:0%;
+            color:$secondary-color__2;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        a:active {
+            color:$primary-color__3;
+            font-family:'AvenirDemi';
+            box-sizing: border-box;
+            border-bottom: solid 3px $primary-color__3;
+            width:100%;
+
+        }
+        
 }
 
 
@@ -331,19 +444,23 @@
 @mixin header-footer-background {
     background-color: $primary-color__1;
 }
-
-@mixin logo {
+@mixin header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
 @mixin navigation__mobile {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 2rem;
+    background-color: $primary-color__1;
+    width: 100%;
+        
+
 }
+
+
 @mixin footer__mobile {
     display: flex;
     flex-direction: column;
@@ -361,6 +478,7 @@
 @mixin image__style{
     width:100%;
     size: cover;
+    padding: $between-components;
 
 }
 
@@ -377,6 +495,7 @@
 @mixin navigation__desktop-tablet {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 @mixin footer__desktop-tablet {
     display: flex;

@@ -1,32 +1,65 @@
 body {
   margin: 0%;
+  font-family: "AvenirRegular";
 }
 
+@font-face {
+  font-family: AvenirRegular;
+  src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
+}
+@font-face {
+  font-family: AvenirDemi;
+  src: url(../assets/Font/AvenirNextLTPro-Demi.otf);
+}
+@font-face {
+  font-family: AvenirBold;
+  src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
+}
 .header {
   background-color: #323232;
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: "Times New Roman", Times, serif;
-  line-height: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.logo {
+  max-width: 7.5rem;
+  max-height: 1.25rem;
+  padding: 1.5rem 0rem 0rem 0rem;
+}
+
 nav {
-  margin-bottom: 0%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 2rem;
-  color: #ffffff;
-  font-weight: 400;
-  text-decoration: underline;
-  text-decoration-color: #ffffff;
+  background-color: #323232;
+  width: 100%;
+  color: #afafaf;
+  font-size: 1rem;
+  font-family: "AvenirRegular";
+  line-height: 2rem;
 }
-nav h2 {
+nav .main-link {
+  color: #ffffff;
+  font-family: "AvenirDemi";
+  box-sizing: border-box;
+  border-bottom: solid 3px #ffffff;
+  width: 100%;
+}
+nav a {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 2%;
   margin: 0%;
+  color: #e1e1e1;
+  text-decoration: none;
+  width: 100%;
+}
+nav a:active {
+  color: #ffffff;
+  font-family: "AvenirDemi";
+  box-sizing: border-box;
+  border-bottom: solid 3px #ffffff;
+  width: 100%;
 }
 
 .cover__container {
@@ -36,22 +69,72 @@ nav h2 {
 
 .overlay {
   background-color: rgba(80, 50, 50, 0.5);
-  color: white;
+  color: #ffffff;
   padding: 18% 5%;
+  margin-top: 0%;
+}
+.overlay h1 {
+  font-family: "AvenirDemi";
+  font-size: 2rem;
 }
 
 .about__container {
   margin: 5%;
+  margin-top: 0%;
+}
+
+.about__title {
+  font-family: "AvenirDemi";
+  font-size: 2rem;
+  color: #323232;
+  padding: 1.5rem 0rem 0rem 0rem;
+  margin: 0%;
+}
+
+.about__quote {
+  font-family: "AvenirDemi";
+  font-size: 1.1rem;
+  color: #323232;
+  line-height: 2rem;
+  padding: 1rem 0rem 0rem 0rem;
+}
+.about__quote p {
+  margin: 0%;
+}
+
+.intro-title {
+  font-family: "AvenirRegular";
+  color: #000000;
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  padding: 1.5rem 0rem 0rem 0rem;
+  margin: 0%;
+}
+
+.intro-body {
+  font-family: "AvenirRegular";
+  color: #323232;
+  font-size: 1rem;
+  line-height: 1.8rem;
+  padding: 1rem 0rem 0rem 0rem;
+  margin: 0%;
 }
 
 .image__style {
   width: 100%;
   size: cover;
+  padding: 1rem 0rem 0rem 0rem;
 }
 
 .gallery {
   background-color: #fafafa;
-  padding: 3% 0%;
+}
+.gallery p {
+  margin: 0%;
+  font-size: 2rem;
+  font-family: "AvenirDemi";
+  padding: 1.5rem 0rem 0rem 0rem;
+  color: #323232;
 }
 
 .gallery__content {
@@ -65,13 +148,52 @@ nav h2 {
   gap: 1rem;
 }
 
-.footer-background {
+.footer-style {
   background-color: #323232;
+}
+
+.contact {
+  font-family: "AvenirDemi";
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+}
+.contact h1 {
+  margin: 0%;
+  padding: 1.5rem 0rem 0rem 0rem;
+}
+.contact .socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+  padding: 1rem 0rem 0rem 0rem;
+}
+
+.booking-links {
+  font-family: "AvenirRegular";
+  font-size: 1.1rem;
+  line-height: 1.125rem;
+}
+.booking-links .booking-title {
+  font-family: "AvenirDemi";
+  padding: 1rem 0rem 0rem 0rem;
+}
+
+.footer-end p {
+  font-size: 0.8rem;
+  margin: 0%;
+  padding: 1rem 0rem 0rem 0rem;
 }
 
 footer {
   margin: 0% 5% 5% 5%;
-  padding: 5% 0% 5% 0%;
+  padding: 0% 0% 5% 0%;
   background-color: #323232;
   color: white;
+}
+footer .logo {
+  max-width: 7.5rem;
+  max-height: 1.25rem;
+  padding: 1.5rem 0rem 0rem 0rem;
 }/*# sourceMappingURL=bio.css.map */

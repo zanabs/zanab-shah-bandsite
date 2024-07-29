@@ -31,10 +31,11 @@ $text-size__body-copy:.875rem;
 $text-size__footer-copy: .875rem;
 $text-size__labels-buttons: .75rem;
 
-$text-size__page-header__mobile: 1.5rem;
-$text-size__section-header__mobile: 1.5rem;
-$text-size__subheader__mobile:.875rem;
-$text-size__body-copy__mobile:.8125rem;
+$page-header__mobile: 2rem;
+$nav-links__mobile: 1rem;
+$section-header__mobile: 2rem;
+$subheader__mobile:1.1rem;
+$body-copy__mobile:1rem;
 $text-size__footer-copy__mobile: .8125rem; 
 $text-size__labels-buttons__mobile: .625rem;
 
@@ -50,21 +51,18 @@ $line-height__labels-buttons: 1.25rem;
 $line-height__page-header__mobile:2rem;
 $line-height__section-header__mobile:2rem;
 $line-height__sub-header__mobile:1.375rem; 
-$line-height__body-copy__mobile:1.125rem;
+$line-height__body-copy__mobile:2rem;
 $line-height__footer-copy__mobile:1.125rem;
 $line-height__labels-buttons__mobile: 1.25rem;
 
     //typography (font weight)
 
-$font-weight__page-section-header: 700;
-$font-weight__subheader:600;
-$font-weight__body-footer:400;
-$font-weight__labels-buttons:$font-weight__page-section-header; 
+$font-regular: 'AvenirRegular';
+$font-demi: 'AvenirDemi';
+$font-bold: 'AvenirBold';
 
-$font-weight__page-section-header__mobile:$font-weight__page-section-header;
-$font-weight__subheader__mobile:$font-weight__subheader;
-$font-weight__body-footer__mobile:$font-weight__body-footer;
-$font-weight__labels-buttons__mobile:$font-weight__labels-buttons;
+
+
 
 
     //form field styling 
@@ -137,6 +135,9 @@ $inactive-link__weight: 400;
 
 $hover-link__color: $active-link__color; 
 $hover-link__weight: $inactive-link__weight;
+
+$headline__mobile: 1.5rem 0rem 0rem 0rem;
+$between-components: 1rem 0rem 0rem 0rem;
 
 
 
