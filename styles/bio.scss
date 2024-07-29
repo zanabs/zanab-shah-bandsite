@@ -1,0 +1,221 @@
+@use './partials/mixins.scss' as *;
+@use './partials/variables.scss' as *;
+@use './partials/global.scss' as *;
+
+h1 {
+	@include typography__page-header;
+}
+
+h2 {
+	@include typography__section-header;
+}
+
+h3 {
+	@include typography__subheader;
+}
+
+header {
+	@include header-footer-background;
+
+}
+
+.header.section__content {
+	padding-bottom: 0;
+}
+
+.header {
+	@include display-flex-col;
+
+	@include tablet {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+
+		.logo {
+			padding: 0% 5%;
+
+		}
+
+		nav {
+			justify-content: left;
+
+			gap: 1rem;
+
+			a {
+				padding: 4% 0%;
+				width: initial;
+
+			}
+		}
+	}
+
+}
+
+.logo {
+	max-width: 7.5rem;
+	max-height: 1.25rem;
+	width: 100%;
+	padding: 1rem 0;
+
+	img {
+		width: 100%;
+	}
+}
+
+nav {
+	@include navigation__mobile;
+	@include typography__nav;
+}
+
+.cover__container {
+	background-image: url(../assets/Images/hero-bio.jpg);
+	background-size: cover;
+}
+
+.overlay {
+	@include overlay;
+	margin-top: 0%;
+}
+
+.about__quote {
+	@include typography-about__quote;
+}
+
+.about__intro {
+	@include typography__body-paragraph;
+}
+
+.image__style {
+	@include image__style;
+}
+
+.gallery {
+	@include gallery;
+}
+
+.gallery__photos {
+	@include gallery__photos;
+    
+
+	.image__style {
+		@include tablet {
+			width: calc(33% - (2rem * 2/3));
+		}
+        filter:grayscale(100%);
+
+	}
+    .image__style:hover {
+        filter: grayscale(0%);
+    }
+
+}
+
+
+.footer-style {
+	@include header-footer-background;
+
+}
+
+.contact {
+	@include typography__footer-contact;
+	@include contact;
+
+	@include tablet {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 50px;
+	}
+}
+
+.booking-links {
+	@include booking-links;
+
+	@include tablet {
+		display: flex;
+		gap: 2rem;
+	}
+}
+
+header,
+section,
+footer {
+	.section__content {
+		margin: 0 1rem;
+		padding-bottom: 1rem;
+
+		@include tablet {
+			margin: 0 2rem;
+			padding-bottom: 2rem;
+		}
+
+		@include desktop {
+			margin: auto;
+			max-width: 64rem;
+		}
+	}
+}
+
+footer {
+	@include header-footer-background;
+	color: white;
+
+	h2 {
+		color: white;
+	}
+}
+
+.footer-start {
+	@include tablet {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		display: none;
+
+		@include tablet {
+			display: block;
+		}
+	}
+}
+
+.footer-end {
+	p {
+		font-size: 0.8rem;
+		margin: 0%;
+		padding: $between-components;
+	}
+
+	.logo {
+		display: block;
+
+		@include tablet {
+			display: none;
+		}
+	}
+}
+
+.intro-paragraph {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+
+	p {
+		width: 100%;
+
+		@include tablet {
+			width: calc(50% - 2rem/2);
+		}
+	}
+}
+
+.about__content-container {
+	width: 100%;
+	margin: auto;
+
+	@include tablet {
+		width: 80%;
+	}
+}

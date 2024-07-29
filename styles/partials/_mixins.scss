@@ -1,0 +1,392 @@
+@use './global.scss' as *;
+@use './variables.scss' as *;
+
+
+//typography
+@mixin typography__page-header {
+	font-size: $page-header__mobile;
+	font-family: $font-regular;
+	font-weight: $font-weight-demi;
+	line-height: $line-height__page-header__mobile;
+
+	@include tablet {
+		font-size: $text-size__page-header;
+	}
+}
+
+@mixin typography__section-header {
+	color: $primary-color__1;
+	font-size: $text-size__section-header;
+	font-weight: $font-weight-demi;
+	font-family: $font-regular;
+	line-height: $line-height__section-header;
+	padding-top: $section-header__padding-top;
+	margin-bottom: $section-header__margin-bottom;
+	margin-top: 0;
+
+	@include tablet {
+		font-weight: $font-weight-demi;
+		margin-bottom: $section-header__margin-bottom-tablet;
+		padding-top: $section-header__padding-top-tablet;
+	}
+}
+
+@mixin typography__subheader {
+	color: $primary-color__1;
+	font-size: $text-size__subheader;
+	font-weight: $font-weight-demi;
+	font-family: $font-regular;
+	line-height: $line-height__sub-header;
+}
+
+@mixin display-flex-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+//header
+
+
+@mixin header-footer-background {
+	background-color: $primary-color__1;
+}
+
+
+@mixin overlay {
+	background-color: $overlay__hero;
+	color: $primary-color__3;
+	padding: 18% 5%;
+}
+
+@mixin typography-about__quote {
+	font-family: $font-regular;
+	font-size: $subheader__mobile;
+	color: $primary-color__1;
+	font-weight: $font-weight-demi;
+	line-height: $line-height__body-copy__mobile;
+	padding: $between-components;
+
+	p {
+		margin: 0%;
+	}
+}
+
+@mixin typography__body-paragraph {
+	font-family: $font-regular;
+	color: $primary-color__1;
+	font-size: $body-copy__mobile;
+	line-height: 28.8px;
+	padding: $between-components;
+	margin: 0%;
+}
+
+@mixin gallery {
+	background-color: $secondary-color__3;
+}
+
+@mixin typography__footer-contact {
+	font-family: $font-regular;
+	font-size: $subheader__mobile;
+}
+
+@mixin contact {
+	display: flex;
+	flex-direction: column;
+
+	.socials {
+		display: flex;
+		flex-direction: row;
+		justify-content: left;
+		gap: 16px;
+
+		.icons {
+			width: 32px;
+			height: 32px;
+			margin: 16px 0;
+		}
+	}
+}
+
+@mixin booking-links {
+	font-family: $font-regular;
+	font-size: $subheader__mobile;
+	line-height: $line-height__footer-copy__mobile;
+	margin-bottom: 48px;
+
+	.booking-title {
+		font-family: $font-regular;
+		font-weight: $font-weight-demi;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+}
+
+
+//link styling across various states 
+
+@mixin typography__nav {
+	color: $secondary-color__2;
+	font-family: $font-regular;
+	font-size: $nav-links__mobile;
+	line-height: $line-height__page-header__mobile;
+
+	.main-link {
+		color: $primary-color__3;
+		font-family: $font-regular;
+		box-sizing: border-box;
+		border-bottom: solid .1875rem $primary-color__3;
+		width: 100%;
+	}
+
+	a {
+		text-align: center;
+		width: 100%;
+		padding-bottom: 2%;
+		margin: 0%;
+		color: $secondary-color__2;
+		font-family: $font-regular;
+		text-decoration: none;
+		width: 100%;
+	}
+
+	a:active,
+	a:hover {
+        color: $primary-color__3;
+		border-bottom: solid .1875rem $primary-color__3;
+	}
+}
+
+@mixin typography__section-header {
+	color: $primary-color__1;
+	font-size: $text-size__section-header;
+	font-weight: $font-weight-demi;
+	font-family: $font-regular;
+	line-height: $line-height__section-header;
+	padding-top: $section-header__padding-top;
+	margin-bottom: $section-header__margin-bottom;
+	margin-top: 0;
+
+	@include tablet {
+		font-weight: $font-weight-demi;
+		margin-bottom: $section-header__margin-bottom-tablet;
+		padding-top: $section-header__padding-top-tablet;
+	}
+}
+
+@mixin navigation__mobile {
+	display: flex;
+	flex-direction: row;
+	background-color: $primary-color__1;
+	width: 100%;
+}
+
+@mixin footer__mobile {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin container-width {
+	margin: 5%;
+}
+
+@mixin image__style {
+	width: 100%;
+}
+
+@mixin gallery__photos {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: space-between;
+	gap: 16px;
+
+	@include tablet {
+		gap: 32px;
+	}
+}
+
+//media queries 
+
+@mixin tablet {
+	@media screen and (min-width: 767px) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media screen and (min-width: 1280px) {
+		@content;
+	}
+}
+
+//cta button styling across various states 
+/*
+@mixin cta__desktop-tablet{
+    height: $CTA-height;
+    min-width: $CTA-min-width__desktop-tablet;
+    padding: $CTA-min-padding__desktop-tablet;
+    border-radius: $CTA-radius;
+
+}
+
+@mixin cta__mobile {
+    height:$CTA-height;
+    width:$CTA-width__mobile;
+    border-radius: $CTA-radius;
+}
+
+@mixin cta-default{
+    background: $CTA-default__background;
+    color: $CTA-default__text;
+}
+
+@mixin cta-hover{
+    $CTA-hover__background: $secondary-color__1;
+    $CTA-hover__text:$CTA-default__text;
+}
+
+    //avatar styling 
+
+@mixin avatar-style {
+    box-sizing: border-box;
+    border-radius: $avatar-border-radius;
+    max-width: $avatar__desktop-tablet-max-width-height;
+    max-height: $avatar__desktop-tablet-max-width-height;
+}
+
+@mixin avatar-style__mobile {
+    box-sizing: border-box;
+    border-radius: $avatar-border-radius;
+    max-width: $avatar__mobile-max-width-height;
+    max-height: $avatar__mobile-max-width-height;
+}
+    
+@mixin avatar-placeholder{
+    background-color: $primary-color__2;
+    box-sizing: border-box;
+    border-radius: $avatar-border-radius;
+    max-width: $avatar__desktop-tablet-max-width-height;
+    max-height: $avatar__desktop-tablet-max-width-height;
+
+}
+
+@mixin avatar-placeholder__mobile{
+    background-color: $primary-color__2;
+    box-sizing: border-box;
+    border-radius: $avatar-border-radius;
+    max-width: $avatar__mobile-max-width-height;
+    max-height: $avatar__mobile-max-width-height;
+}
+
+    //table styling across various states 
+
+
+@mixin default-table {
+    padding: $default-table-row__desktop-tablet;
+    background-color: $primary-color__3;
+}
+
+@mixin default-table__mobile{
+    padding: $default-table-row__mobile;
+    background-color: $primary-color__3;
+}
+
+@mixin selected-table {
+    background-color: $table-row-selected;
+
+}
+
+@mixin hover-table {
+    background-color: $table-row-hover;
+}
+
+    //field forms 
+@mixin default-field-form {
+    height: $form-field-height__desktop-tablet;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__default;
+    width: $form-field-width;
+    padding: $form-field-padding__desktop-tablet;
+
+
+}
+
+@mixin filled-field-form {
+    height: $form-field-height__desktop-tablet;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__default;
+    width: $form-field-width;
+    padding: $form-field-padding__desktop-tablet;
+    
+}
+
+@mixin active-field-form {
+    height: $form-field-height__desktop-tablet;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__active;
+    width: $form-field-width;
+    padding: $form-field-padding__desktop-tablet;
+}
+
+@mixin error-field-form {
+    height: $form-field-height__desktop-tablet;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__error;
+    width: $form-field-width;
+    padding: $form-field-padding__desktop-tablet;
+}
+
+@mixin default-field-form__mobile {
+    height: $form-field-height__mobile;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__default;
+    width: $form-field-width;
+    padding: $form-field-padding__mobile;
+}
+
+@mixin filled-field-form__mobile {
+    height: $form-field-height__mobile;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__default;
+    width: $form-field-width;
+    padding: $form-field-padding__mobile;
+    
+}
+
+@mixin active-field-form {
+    height: $form-field-height__mobile;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__active;
+    width: $form-field-width;
+    padding: $form-field-padding__mobile;
+}
+
+@mixin error-field-form {
+    height: $form-field-height__mobile;
+    background-color: $primary-color__3;
+    color: $secondary-color__1;
+    border-radius: $form-field-radius;
+    border-color: $form-field-border__error;
+    width: $form-field-width;
+    padding: $form-field-padding__mobile;
+}
+*/

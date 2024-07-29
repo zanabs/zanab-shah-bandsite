@@ -1,0 +1,173 @@
+    //colors 
+
+$primary-color__1:#323232; 
+//BandSite-Black: Primary text color for dark on light background. Dark background color
+
+$primary-color__2:#afafaf;
+//Silver: Seconday text color. Inactive CTA text color
+
+$primary-color__3: #ffffff;
+//White: Primary text color for light on dark background. Light background color. Active CTA text color.
+
+$secondary-color__1:#000000;
+//BandSite-DarkBlack: CTA hover state.
+
+$secondary-color__2:#e1e1e1;
+//Mercury: Divider line. Form field outline. 
+
+$secondary-color__3:#fafafa;
+//Alabaster: Alternative light background color.
+
+$error-color:#d22d2d;
+//error color 
+
+
+    //typography (size)
+
+$text-size__page-header: 3.75rem;
+$text-size__section-header:2.25rem;
+$text-size__subheader: 1.1rem;
+$text-size__body-copy:.875rem;
+$text-size__footer-copy: .875rem;
+$text-size__labels-buttons: .75rem;
+
+
+    //typography (line height) 
+
+$line-height__page-header:4.25rem;
+$line-height__section-header:2.75rem;
+$line-height__sub-header:1.5rem;
+$line-height__body-copy:.875rem;
+$line-height__footer-copy:1.8rem;
+$line-height__labels-buttons: 1.25rem;
+$section-header__padding-top: 1.5rem;
+$section-header__padding-top-tablet: 3rem;
+$section-header__margin-bottom: 1rem;
+$section-header__margin-bottom-tablet: 2rem;
+
+    //typography (font weight)
+
+$font-regular: 'AvenirNext';
+
+$font-weight-regular: 400;
+$font-weight-demi: 600;
+$font-weight-bold: 700;
+
+  //hero image colors, opacity and other styling 
+
+  $overlay__hero: rgba(80, 50, 50, 0.5);
+
+//padding increments 
+
+$headline__mobile: 1.5rem 0rem 0rem 0rem;
+$between-components: 1rem 0rem 0rem 0rem;
+
+
+
+    //form field styling 
+
+$form-field-height__mobile: 2.25rem;
+$form-field-height__desktop-tablet: 48px;
+$form-field-radius: .25rem;
+$form-field-width: 100%; 
+
+$form-field-padding__mobile: .75rem;
+$form-field-padding__desktop-tablet: 16px;
+
+$field-label-form-margin: .25rem;
+
+$form-field-border__default: 0.0625rem $secondary-color__2;
+$form-field-border__active: 0.0625rem $primary-color__1;
+$form-field-border__error:0.0625rem $error-color; 
+
+    //default table row styling 
+
+$default-table-row__desktop-tablet: 1.5rem 1.125rem 1.5rem 1.125rem;
+$default-table-row__mobile:1rem; 
+
+$table-row-selected:$secondary-color__2;
+$table-row-hover:$secondary-color__3;
+
+
+    //avatar image styling
+
+$avatar-border-radius: 50%;
+$avatar__desktop-tablet-max-width-height: 3rem;
+$avatar__mobile-max-width-height: 2.25rem;
+$avatar-placeholder:$secondary-color__2;
+
+  
+
+    //BandSite logo styling 
+
+$BandSite-logo__background: $primary-color__1;
+$BandSite-logo__max-height: 1.25rem;
+$BandSite-logo__max-width: 7.5rem;
+$BandSite-logo__text: $primary-color__3;
+
+    //social icons styling 
+$socials__bakcground:$primary-color__1;
+
+    //Call to Action (CTA) button styling 
+
+$CTA-height:2.5rem;
+$CTA-min-width__desktop-tablet:9.375rem;
+$CTA-min-padding__desktop-tablet: 0rem 2rem 0rem 2rem;
+$CTA-width__mobile:100%;
+$CTA-radius: .25rem;
+
+    //Call to Action (CTA) button styling in different states
+$CTA-default__background: $primary-color__1; 
+$CTA-default__text:$primary-color__3;
+
+$CTA-hover__background: $secondary-color__1;
+$CTA-hover__text:$CTA-default__text;
+
+    //Link styles across various states 
+$active-link__color: $primary-color__3;
+$active-link__weight: 700;
+
+$inactive-link__color: $primary-color__3;
+$inactive-link__weight: 400;
+
+$hover-link__color: $active-link__color; 
+$hover-link__weight: $inactive-link__weight;
+
+
+$page-header__mobile: 2rem;
+$nav-links__mobile: 1rem;
+$section-header__mobile: 2rem;
+$subheader__mobile:1.1rem;
+$body-copy__mobile:1rem;
+$text-size__footer-copy__mobile: .8125rem; 
+$text-size__labels-buttons__mobile: .625rem;
+
+
+$line-height__page-header__mobile:2rem;
+$line-height__section-header__mobile:2rem;
+$line-height__sub-header__mobile:1.375rem; 
+$line-height__body-copy__mobile:2rem;
+$line-height__footer-copy__mobile:1.8rem;
+$line-height__labels-buttons__mobile: 1.25rem;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
