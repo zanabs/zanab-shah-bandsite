@@ -275,6 +275,19 @@ textarea::placeholder {
 	@include new-comment;
 }
 
+button {
+	@mixin button {
+		color: $primary-color__3;
+		background-color: $secondary-color__1;
+		border: solid 1px $secondary-color__1;
+		border-radius: 10px;
+		margin: 1rem 0rem;
+		padding: 5%;
+		width: 100%;
+	
+	}
+}
+
 
 .comment-card__container {
 	@include comment-card__container;
