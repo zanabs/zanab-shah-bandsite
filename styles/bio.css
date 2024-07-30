@@ -520,8 +520,9 @@ footer h2 {
   }
 }
 
-.comments {
-  margin: 5%;
+.comments h2 {
+  padding-top: 0%;
+  margin-top: 24px;
 }
 
 .new-comment__container {

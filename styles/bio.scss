@@ -222,7 +222,11 @@ footer {
 }
 
 .comments {
-	@include container-width;
+
+		h2 {
+			padding-top:0%;
+			margin-top: 24px;
+		}
 }
 
 .new-comment__container {
