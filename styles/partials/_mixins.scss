@@ -126,6 +126,136 @@
 	}
 }
 
+//comment card styling
+
+/*
+
+<div class="new-comment__container">
+<div class="avatar">
+</div>
+<div class="new-comment">
+   <div class="form-field__name">
+	  <p>NAME</p>
+		 <div class="name__input">
+		 <p>Enter your name</p>
+		 </div>
+   </div>
+   <div class=form-field__comment>
+	  <p>COMMENT</p>
+		 <div class="comment__input">
+		 <p>Add your comment</p>
+		 </div>
+   </div>
+</div>
+</div> */
+
+@mixin new-comment__container{
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	gap: 1rem;
+	border-bottom: solid 1px $secondary-color__2;
+	margin-top: 0px;
+	padding-bottom: 1px;
+
+}
+
+@mixin avatar {
+	min-height: 25px;
+	min-width:25px;
+	width:25px;
+	height:25px;
+	border-radius: 50%;
+}
+
+@mixin new-comment{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin:0%;
+
+		button {
+			color: $primary-color__3;
+			background-color: $secondary-color__1;
+			border: solid 1px $secondary-color__1;
+			border-radius: 10px;
+			margin: 1rem 0rem;
+			padding: 5%;
+			width: 100%;
+
+		}
+}
+
+@mixin field-form__label {
+	font-size: $label;
+	line-height: $label__line-height;
+	font-weight: $font-weight-bold;
+	color: $primary-color__2;
+	p {
+		margin:0rem;
+	}
+}
+
+@mixin field-form__input {
+	font-size: $body-copy__mobile;
+	color: $secondary-color__1;
+	background-color: $secondary-color__3;
+	border: solid 1px $primary-color__2;
+	border-radius: 10px;
+
+}
+
+
+
+@mixin comment-card__container {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 1rem;
+	border-bottom: solid 1px $secondary-color__2;
+	margin-top: 28px;
+	padding-bottom: 1px;
+}
+
+@mixin avatar-placeholder {
+	min-height: 25px;
+	min-width:25px;
+	width:25px;
+	height:25px;
+	background-color: $secondary-color__2;
+	border-radius: 50%;
+}
+
+@mixin name__timestamp {
+	display:flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: 2rem;
+		h4 {
+			margin:0%;
+		}
+
+			p {
+				color: $primary-color__2;
+				text-align: left;
+				margin: 0%;
+			}
+}
+
+@mixin placeholder {
+	min-height: 25px;
+	min-width: 25px;
+	width:25px;
+	height: 25px;
+	background-color: $secondary-color__2;
+	border-radius: 50%;
+}
+
+@mixin comment-card__text {
+	display: flex;
+	flex-direction: column;
+}
+
 
 //link styling across various states 
 
@@ -223,6 +353,8 @@
 		@content;
 	}
 }
+
+
 
 //cta button styling across various states 
 /*

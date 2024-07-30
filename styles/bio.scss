@@ -153,6 +153,7 @@ footer {
 			margin: auto;
 			max-width: 64rem;
 		}
+		
 	}
 }
 
@@ -218,4 +219,73 @@ footer {
 	@include tablet {
 		width: 80%;
 	}
+}
+
+.comments {
+	@include container-width;
+}
+
+.new-comment__container {
+	@include new-comment__container;
+}
+
+.form-field__name {
+	@include field-form__label;
+	margin-top:0%;
+	
+}
+.name__input {
+	@include field-form__input;
+	padding: 10px;
+	
+}
+
+input::placeholder {
+	color: $secondary-color__1;
+	font-family: $font-regular;
+}
+
+textarea::placeholder {
+	color: $secondary-color__1;
+	font-family: $font-regular;
+	text-align: left;
+	padding: 0%;
+}
+
+.form-field__comment {
+	@include field-form__label;
+	padding: $between-components;
+}
+.comment__input {
+	@include field-form__input;
+
+	padding:9px;
+}
+
+.avatar {
+	@include avatar;
+	margin: $between-components;
+}
+
+.new-comment {
+	@include new-comment;
+}
+
+
+.comment-card__container {
+	@include comment-card__container;
+
+	
+}
+
+.avatar-placeholder {
+	@include avatar-placeholder;
+}
+
+.name__timestamp {
+	@include name__timestamp;
+}
+
+.comment-card__text {
+	@include comment-card__text;
 }
