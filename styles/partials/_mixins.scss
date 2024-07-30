@@ -49,9 +49,7 @@
 //header
 
 
-@mixin header-footer-background {
-	background-color: $primary-color__1;
-}
+
 
 
 @mixin overlay {
@@ -86,10 +84,7 @@
 	background-color: $secondary-color__3;
 }
 
-@mixin typography__footer-contact {
-	font-family: $font-regular;
-	font-size: $subheader__mobile;
-}
+
 
 @mixin contact {
 	display: flex;
@@ -109,22 +104,7 @@
 	}
 }
 
-@mixin booking-links {
-	font-family: $font-regular;
-	font-size: $subheader__mobile;
-	line-height: $line-height__footer-copy__mobile;
-	margin-bottom: 48px;
 
-	.booking-title {
-		font-family: $font-regular;
-		font-weight: $font-weight-demi;
-	}
-
-	a {
-		color: inherit;
-		text-decoration: none;
-	}
-}
 
 //comment card styling
 
@@ -328,10 +308,7 @@
 	width: 100%;
 }
 
-@mixin footer__mobile {
-	display: flex;
-	flex-direction: column;
-}
+
 
 @mixin container-width {
 	margin: 5%;
