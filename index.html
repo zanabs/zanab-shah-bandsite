@@ -6,6 +6,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="./styles/bio.css">
       <title>Bandsite - Biography</title>
+      <script src="script.js" defer></script>
    </head>
    <body>
     <header>
@@ -102,7 +103,7 @@
 
 
       <section class="comments">
-         <div class="section__content">
+         <form class="comments__form" action="url" method="">
             <h2>Join the Conversation</h2>
 
                <div class="new-comment__container">
@@ -114,18 +115,19 @@
                            <p>NAME</p>
                         </div>
          
-                        <input class="name__input" placeholder="Enter your name">
+                        <input class="name__input" name="username" placeholder="Enter your name">
          
                         <div class=form-field__comment>
                            <p>COMMENT</p>
                         </div>
-                        <textarea class="comment__input" rows= "6" placeholder="Add your comment"></textarea>
+                        <textarea class="comment__input" name="comment"rows= "6" placeholder="Add your comment"></textarea>
                         <div>
-                           <button>COMMENT</button>
+                           <button type="submit" name="submit-button">COMMENT</button>
                         </div>
                      </div>
 
                </div>
+         </form>
 
                <div class="comment-card__container">
                   <div class="avatar-placeholder">
