@@ -72,7 +72,7 @@ function buildShowsSection() {
 
     showsContent.append(showsListContainer);
 
-    const showsContainer = document.querySelector('.shows__container .section__content');
+    const showsContainer = document.querySelector('.shows__container .section-content');
     console.log(showsContainer);
     showsContainer.append(showsContent);
 }

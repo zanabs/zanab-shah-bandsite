@@ -1,44 +1,6 @@
 @use './variables.scss' as *;
 @use './mixins.scss' as *;
 
-body {
-    margin:0%;
-    font-family: $font-regular;
-}
-
-@mixin header-footer-background {
-	background-color: $primary-color__1;
-}
-
-@mixin typography__footer-contact {
-	font-family: $font-regular;
-	font-size: $subheader__mobile;
-}
-
-@mixin booking-links {
-	font-family: $font-regular;
-	font-size: $subheader__mobile;
-	line-height: $line-height__footer-copy__mobile;
-	margin-bottom: 48px;
-
-	.booking-title {
-		font-family: $font-regular;
-		font-weight: $font-weight-demi;
-	}
-
-	a {
-		color: inherit;
-		text-decoration: none;
-	}
-}
-
-@mixin footer__mobile {
-	display: flex;
-	flex-direction: column;
-}
-
-//font-types 
-
 @font-face {
     font-family: AvenirNext;
     src: url(../assets/Font/AvenirNextLTPro-Regular.otf);
@@ -60,12 +22,73 @@ body {
     font-weight: 700;
 }
 
+body {
+    margin:0%;
+    font-family: $font-regular;
+}
+
+p {
+	@include typography__body-paragraph;
+}
+
+h1 {
+	@include typography__page-header;
+}
+
+h2 {
+	@include typography__section-header;
+}
+
+h3 {
+	@include typography__subheader;
+}
+
+header {
+	background-color: $primary-color__1;
+}
+
+.header.section-content {
+	padding-bottom: 0;
+}
+
+.header {
+	@include flex-col-center;
+	@include tablet {
+		@include flex-row-center;
+
+		.logo {
+			padding: 0% 5%;
+		}
+
+		nav {
+			justify-content: left;
+			gap: 1rem;
+
+			a {
+				padding: 4% 0%;
+				width: initial;
+			}
+		}
+	}
+}
+
 button {
-	@include button;
+	color: $primary-color__3;
+	background-color: $secondary-color__1;
+	border: solid 1px $secondary-color__1;
+	border-radius: 10px;
+	padding: 0.75rem 2rem;
+	margin: 1rem 0;
+	width: 100%;
+
+	@include tablet {
+		width: initial;
+		margin: initial;
+	}
 }
 
 footer {
-	@include header-footer-background;
+	background-color: $primary-color__1;
 	color: white;
 
 	p {
@@ -75,4 +98,182 @@ footer {
 	h2 {
 		color: white;
 	}
+}
+
+.footer {
+	background-color: $primary-color__1;
+}
+
+.contact {
+	font-family: $font-regular;
+	font-size: $subheader__mobile;
+	display: flex;
+	flex-direction: column;
+
+	.footer__socials {
+		display: flex;
+		flex-direction: row;
+		justify-content: left;
+		gap: 16px;
+
+		.icons {
+			width: 32px;
+			height: 32px;
+			margin: 16px 0;
+		}
+	}
+
+	@include tablet {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 50px;
+	}
+}
+
+.footer__links {
+	font-family: $font-regular;
+	font-size: $subheader__mobile;
+	line-height: $line-height__footer-copy__mobile;
+	margin-bottom: 48px;
+
+	.booking-title {
+		font-family: $font-regular;
+		font-weight: $font-weight-demi;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	@include tablet {
+		display: flex;
+		gap: 2rem;
+	}
+}
+
+header, section, footer {
+	.section-content {
+		margin: 0 1rem;
+		padding-bottom: 1rem;
+
+		@include tablet {
+			margin: 0 2rem;
+			padding-bottom: 2rem;
+		}
+
+		@include desktop {
+			margin: auto;
+			max-width: 64rem;
+		}
+	}
+}
+
+.footer__start {
+	@include tablet {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		display: none;
+
+		@include tablet {
+			display: block;
+		}
+	}
+}
+
+.footer__end {
+	p {
+		font-size: 0.8rem;
+		margin: 0%;
+		padding: $between-components;
+	}
+
+	.logo {
+		display: block;
+
+		@include tablet {
+			display: none;
+		}
+	}
+}
+
+input::placeholder {
+	color: $secondary-color__1;
+	font-family: $font-regular;
+}
+
+textarea::placeholder {
+	color: $secondary-color__1;
+	font-family: $font-regular;
+	text-align: left;
+	padding: 0%;
+}
+
+.dp-flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.logo {
+	max-width: 7.5rem;
+	max-height: 1.25rem;
+	width: 100%;
+	padding: 1rem 0;
+
+	img {
+		width: 100%;
+	}
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	background-color: $primary-color__1;
+	width: 100%;
+	color: $secondary-color__2;
+	font-family: $font-regular;
+	font-size: $nav-links__mobile;
+	line-height: $line-height__page-header__mobile;
+
+	.navigation__link--active {
+		color: $primary-color__3;
+		font-family: $font-regular;
+		box-sizing: border-box;
+		border-bottom: solid .1875rem $primary-color__3;
+		width: 100%;
+	}
+
+	.navigation__link {
+		text-align: center;
+		width: 100%;
+		padding-bottom: 2%;
+		margin: 0%;
+		color: $secondary-color__2;
+		font-family: $font-regular;
+		text-decoration: none;
+		width: 100%;
+	}
+
+	.navigation__link:active,
+	.navigation__link:hover {
+        color: $primary-color__3;
+		border-bottom: solid .1875rem $primary-color__3;
+	}
+}
+
+.cover-container {
+	background-size: cover;
+}
+
+.cover-container__overlay {
+	background-color: $overlay__hero;
+	color: $primary-color__3;
+	padding: 18% 5%;
+	margin-top: 0%;
 }

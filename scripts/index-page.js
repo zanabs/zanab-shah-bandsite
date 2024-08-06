@@ -1,9 +1,8 @@
-// dom elements
 let commentsForm = document.getElementsByClassName("comments__form");
 let nameField = document.getElementsByClassName("name__input");
 let commentField = document.getElementsByClassName("comment__input");
 
-// You must have an array in JavaScript with 3 default comment objects to start. Comments must have a name, a timestamp, and the comment text.
+
 let commentsArray = [
     {
         name:"Victor Pinto",
@@ -21,18 +20,16 @@ let commentsArray = [
         timestamp:"10/20/2023"
     }
 ]
-// TODO: You must have a function that takes in one comment object as a parameter and displays it on the page using JavaScript DOM manipulation.
-// TODO: All dynamic HTML should be added to DOM via DOM Methods for individual elements. Avoid bulk assigning stringified HTML using innerHTML
+
 function addComment(newComment) {
-    // Pushes a new comment object to an array of comments
+    
     commentsArray.push(newComment); 
 
-    // Re-renders to the page all comments from the comment array
     printComments();
     resetInputFields();
 }
 
-// Clears the input fields after submitting a new comment
+
 function resetInputFields() {
     nameField[0].value = '';
     commentField[0].value = '';
@@ -43,7 +40,8 @@ function createCommentDOMElement(comment) {
     commentCardContainerDiv.classList = "comment-card__container";
 
     const avatarPlaceHolderDiv = document.createElement('div');
-    avatarPlaceHolderDiv.classList = "avatar-placeholder";
+    avatarPlaceHolderDiv.classList.add("avatar-placeholder");
+    avatarPlaceHolderDiv.classList.add("avatar");
 
     const commentCardTextDiv = document.createElement('div');
     commentCardTextDiv.classList = "comment-card__text";
@@ -51,7 +49,8 @@ function createCommentDOMElement(comment) {
     const commentNameTimestampDiv = document.createElement('div');
     commentNameTimestampDiv.classList = "name__timestamp";
 
-    const commentName = document.createElement('h4');
+    const commentName = document.createElement('p');
+    commentName.classList.add('comment-name')
     const commentTimestamp = document.createElement('p');
 
     const commentTextDiv = document.createElement('div');
@@ -74,15 +73,15 @@ function createCommentDOMElement(comment) {
     return commentCardContainerDiv;
 }
 
-// You must use an HTML Form with the following functionality:
-// That submits using the addEventListener
+
+
 commentsForm[0].addEventListener("submit", (event) => {
-    // Prevents the page from reloading when submitting a new comment
+    
     event.preventDefault();
     if (nameField[0].value.length < 1 || commentField[0].value.length < 1) {
         alert("please fill out all required fields");       
     } else {
-        // Constructs a new comment object
+        
         let newComment= {
             name: nameField[0].value,
             comment: commentField[0].value,
@@ -95,7 +94,7 @@ commentsForm[0].addEventListener("submit", (event) => {
 function printComments() {
     let commentsContainer = document.getElementsByClassName("comments-container");
 
-    // Clears all comments from the page
+    
     commentsContainer[0].innerHTML = '';
 
     commentsArray.reverse();

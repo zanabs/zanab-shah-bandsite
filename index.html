@@ -10,31 +10,31 @@
    </head>
    <body>
     <header>
-        <div class="header section__content">
+        <div class="header section-content">
            <div class="logo">
-              <a href="index.html"><img alt="bandsite logo" src="assets/Logo/Logo-bandsite.svg"></a>
+              <a href="./index.html"><img alt="bandsite logo" src="assets/Logo/Logo-bandsite.svg"></a>
            </div>
-           <nav>
-              <a class="main-link" href="index.html">Biography</a>
-              <a href="pages/shows.html">Shows</a>
+           <nav class="navigation">
+              <a class="navigation__link navigation__link--active" href="index.html">Biography</a>
+              <a class="navigation__link" href="pages/shows.html">Shows</a>
            </nav>
         </div>
      </header>
-      <section class="cover__container">
-         <div class="overlay">
-            <div class="section__content">
-                <h1 class="cover__text">
-                The Bees Knees
-                </h1>
+      <section class="cover-container cover-container--bio">
+         <div class="cover-container__overlay">
+            <div class="section-content">
+               <h1>
+                  The Bees Knees
+               </h1>
             </div>
          </div>
       </section>
-      <section class="about__container">
-         <div class="section__content">
-            <h2 class="about__title">
+      <section class="about-container">
+         <div class="section-content">
+            <h2 class="about-container__title">
                About the Musicians
             </h2>
-            <div class="about__content-container">
+            <div class="about-container__content">
                <div class="about__image">
                   <img alt="band on stage under spotlights" class="image__style" src="./assets/Images/band.jpg">
                </div>
@@ -83,7 +83,7 @@
          </div>
       </section>
       <section class="gallery">
-         <div class="section__content">
+         <div class="section-content">
             <div class="gallery__content">
                <h2>Photo Gallery</h2>
                <div class="gallery__photos">
@@ -101,56 +101,54 @@
          </div>
       </section>
 
-
       <section class="comments">
-         <div class="section__content">
+         <div class="section-content">
             <form class="comments__form">
                <h2>Join the Conversation</h2>
    
-               <div class="new-comment__container">
-                     <div>
-                        <img class="avatar" src="assets/Images/Mohan-muruge.jpg">
+               <div class="new-comment">
+                  <div>
+                     <img class="avatar" src="assets/Images/Mohan-muruge.jpg">
+                  </div>
+                  <div class="new-comment__container">
+                     <div class="form-field__name">
+                        <p>NAME</p>
                      </div>
-                     <div class="new-comment">
-                        <div class="form-field__name">
-                           <p>NAME</p>
-                        </div>
-         
-                        <input class="name__input" name="name" placeholder="Enter your name">
-         
-                        <div class=form-field__comment>
-                           <p>COMMENT</p>
-                        </div>
-                        <textarea class="comment__input" name="comment"rows= "6" placeholder="Add your comment"></textarea>
-                        <div class="new-comment__button">
-                           <button type="submit">COMMENT</button>
-                        </div>
+      
+                     <input class="name__input" name="name" placeholder="Enter your name">
+      
+                     <div class=form-field__comment>
+                        <p>COMMENT</p>
                      </div>
-   
+                     <textarea class="comment__input" name="comment"rows= "6" placeholder="Add your comment"></textarea>
+                     <div class="new-comment__button">
+                        <button type="submit">COMMENT</button>
+                     </div>
+                  </div>
                </div>
             </form>
             <div class="comments-container"></div>
          </div>
       </section>
 
-      <footer class="footer-style">
-         <div class="section__content">
-            <div class="footer-start">
+      <footer class="footer">
+         <div class="section-content">
+            <div class="footer__start">
                <div class="contact">
                   <h2>
                      Get in Touch
                   </h2>
-                  <div class="socials">
+                  <div class="footer__socials">
                      <img alt="facebook logo" class="icons" src="./assets/Icons/Icon-facebook.svg">
                      <img alt="instagram logo" class="icons" src="./assets/Icons/Icon-instagram.svg">
                      <img alt="twitter logo" class="icons" src="./assets/Icons/Icon-twitter.svg">
                   </div>
                </div>
                <div class="logo">
-                  <img alt="bandsite logo" src="assets/Logo/Logo-bandsite.svg"/>
+                  <a href="./index.html"><img alt="bandsite logo" src="assets/Logo/Logo-bandsite.svg"/></a>
                </div>
             </div>
-            <div class="booking-links">
+            <div class="footer__links">
                <div>
                   <p class="booking-title">The Bees Knees Management</p>
                   <p>503 Broadway Penthouse, <br/> New York, NY 10012, USA</p>
@@ -167,9 +165,9 @@
                   <a href="mailto:bookings@archentertainment.com">bookings@archentertainment.com</a>
                </div>
             </div>
-            <div class="footer-end">
+            <div class="footer__end">
                <div class="logo">
-                  <img alt="bandsite logo" src="assets/Logo/Logo-bandsite.svg"/>
+                  <a href="./index.html"><img alt="bandsite logo" src="assets/Logo/Logo-bandsite.svg"/></a>
                </div>
                <p>
                   Copyright The Bees Knees © 2023 All Rights Reserved
