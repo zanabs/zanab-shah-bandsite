@@ -21,191 +21,33 @@ body {
   src: url(../assets/Font/AvenirNextLTProBold.ttf) format("truetype");
   font-weight: 700;
 }
-/*
-
-<div class="new-comment__container">
-<div class="avatar">
-</div>
-<div class="new-comment">
-   <div class="form-field__name">
-	  <p>NAME</p>
-		 <div class="name__input">
-		 <p>Enter your name</p>
-		 </div>
-   </div>
-   <div class=form-field__comment>
-	  <p>COMMENT</p>
-		 <div class="comment__input">
-		 <p>Add your comment</p>
-		 </div>
-   </div>
-</div>
-</div> */
-/*
-@mixin cta__desktop-tablet{
-    height: $CTA-height;
-    min-width: $CTA-min-width__desktop-tablet;
-    padding: $CTA-min-padding__desktop-tablet;
-    border-radius: $CTA-radius;
-
+button {
+  color: #ffffff;
+  background-color: #000000;
+  border: solid 1px #000000;
+  border-radius: 10px;
+  padding: 0.75rem 2rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+@media screen and (min-width: 767px) {
+  button {
+    width: initial;
+    margin: initial;
+  }
 }
 
-@mixin cta__mobile {
-    height:$CTA-height;
-    width:$CTA-width__mobile;
-    border-radius: $CTA-radius;
+footer {
+  background-color: #323232;
+  color: white;
+}
+footer p {
+  color: white;
+}
+footer h2 {
+  color: white;
 }
 
-@mixin cta-default{
-    background: $CTA-default__background;
-    color: $CTA-default__text;
-}
-
-@mixin cta-hover{
-    $CTA-hover__background: $secondary-color__1;
-    $CTA-hover__text:$CTA-default__text;
-}
-
-    //avatar styling 
-
-@mixin avatar-style {
-    box-sizing: border-box;
-    border-radius: $avatar-border-radius;
-    max-width: $avatar__desktop-tablet-max-width-height;
-    max-height: $avatar__desktop-tablet-max-width-height;
-}
-
-@mixin avatar-style__mobile {
-    box-sizing: border-box;
-    border-radius: $avatar-border-radius;
-    max-width: $avatar__mobile-max-width-height;
-    max-height: $avatar__mobile-max-width-height;
-}
-
-@mixin avatar-placeholder{
-    background-color: $primary-color__2;
-    box-sizing: border-box;
-    border-radius: $avatar-border-radius;
-    max-width: $avatar__desktop-tablet-max-width-height;
-    max-height: $avatar__desktop-tablet-max-width-height;
-
-}
-
-@mixin avatar-placeholder__mobile{
-    background-color: $primary-color__2;
-    box-sizing: border-box;
-    border-radius: $avatar-border-radius;
-    max-width: $avatar__mobile-max-width-height;
-    max-height: $avatar__mobile-max-width-height;
-}
-
-    //table styling across various states 
-
-
-@mixin default-table {
-    padding: $default-table-row__desktop-tablet;
-    background-color: $primary-color__3;
-}
-
-@mixin default-table__mobile{
-    padding: $default-table-row__mobile;
-    background-color: $primary-color__3;
-}
-
-@mixin selected-table {
-    background-color: $table-row-selected;
-
-}
-
-@mixin hover-table {
-    background-color: $table-row-hover;
-}
-
-    //field forms 
-@mixin default-field-form {
-    height: $form-field-height__desktop-tablet;
-    background-color: $primary-color__3;
-    color: $secondary-color__1;
-    border-radius: $form-field-radius;
-    border-color: $form-field-border__default;
-    width: $form-field-width;
-    padding: $form-field-padding__desktop-tablet;
-
-
-}
-
-@mixin filled-field-form {
-    height: $form-field-height__desktop-tablet;
-    background-color: $primary-color__3;
-    color: $secondary-color__1;
-    border-radius: $form-field-radius;
-    border-color: $form-field-border__default;
-    width: $form-field-width;
-    padding: $form-field-padding__desktop-tablet;
-
-}
-
-@mixin active-field-form {
-    height: $form-field-height__desktop-tablet;
-    background-color: $primary-color__3;
-    color: $secondary-color__1;
-    border-radius: $form-field-radius;
-    border-color: $form-field-border__active;
-    width: $form-field-width;
-    padding: $form-field-padding__desktop-tablet;
-}
-
-@mixin error-field-form {
-    height: $form-field-height__desktop-tablet;
-    background-color: $primary-color__3;
-    color: $secondary-color__1;
-    border-radius: $form-field-radius;
-    border-color: $form-field-border__error;
-    width: $form-field-width;
-    padding: $form-field-padding__desktop-tablet;
-}
-
-@mixin default-field-form__mobile {
-    height: $form-field-height__mobile;
-    background-color: $primary-color__3;
-    color: $secondary-color__1;
-    border-radius: $form-field-radius;
-    border-color: $form-field-border__default;
-    width: $form-field-width;
-    padding: $form-field-padding__mobile;
-}
-
-@mixin filled-field-form__mobile {
-    height: $form-field-height__mobile;
-    background-color: $primary-color__3;
-    color: $secondary-color__1;
-    border-radius: $form-field-radius;
-    border-color: $form-field-border__default;
-    width: $form-field-width;
-    padding: $form-field-padding__mobile;
-
-}
-
-@mixin active-field-form {
-    height: $form-field-height__mobile;
-    background-color: $primary-color__3;
-    color: $secondary-color__1;
-    border-radius: $form-field-radius;
-    border-color: $form-field-border__active;
-    width: $form-field-width;
-    padding: $form-field-padding__mobile;
-}
-
-@mixin error-field-form {
-    height: $form-field-height__mobile;
-    background-color: $primary-color__3;
-    color: $secondary-color__1;
-    border-radius: $form-field-radius;
-    border-color: $form-field-border__error;
-    width: $form-field-width;
-    padding: $form-field-padding__mobile;
-}
-*/
 h1 {
   font-size: 2rem;
   font-family: "AvenirNext";
@@ -458,14 +300,6 @@ footer .section__content {
   }
 }
 
-footer {
-  background-color: #323232;
-  color: white;
-}
-footer h2 {
-  color: white;
-}
-
 @media screen and (min-width: 767px) {
   .footer-start {
     display: flex;
@@ -533,6 +367,18 @@ footer h2 {
   border-bottom: solid 1px #e1e1e1;
   margin-top: 0px;
   padding-bottom: 1px;
+}
+
+.new-comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.new-comment__button {
+  display: flex;
+  justify-content: end;
+  margin: 1rem 0;
 }
 
 .form-field__name {
@@ -608,22 +454,6 @@ textarea::placeholder {
   margin: 1rem 0rem 0rem 0rem;
 }
 
-.new-comment {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0%;
-}
-.new-comment button {
-  color: #ffffff;
-  background-color: #000000;
-  border: solid 1px #000000;
-  border-radius: 10px;
-  margin: 1rem 0rem;
-  padding: 5%;
-  width: 100%;
-}
-
 .comment-card__container {
   display: flex;
   flex-direction: row;
@@ -661,4 +491,5 @@ textarea::placeholder {
 .comment-card__text {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }/*# sourceMappingURL=bio.css.map */

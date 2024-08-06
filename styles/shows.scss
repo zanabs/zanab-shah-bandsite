@@ -1,7 +1,6 @@
-@use './partials/mixins.scss' as *;
-@use './partials/variables.scss' as *;
 @use './partials/global' as *;
-@use './bio.scss';
+@use './partials/variables.scss' as *;
+@use './partials/mixins.scss' as *;
 
 
 h1 {
@@ -19,6 +18,10 @@ h3 {
 header {
 	@include header-footer-background;
 
+} 
+
+p {
+	@include typography__body-paragraph;
 }
 
 .header.section__content {
@@ -277,6 +280,8 @@ textarea::placeholder {
 	@include new-comment;
 }
 
+
+
 button {
 	@mixin button {
 		color: $primary-color__3;
@@ -309,4 +314,99 @@ button {
 	@include comment-card__text;
 }
 
+.dp-flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 
+.soundcloud {
+	width: 100%;
+	@include tablet {
+		width: 75%;
+	}
+
+	@include desktop {
+		width: 50%;
+	}
+}
+
+.show-label {
+	@include typography__labels-buttons;
+	color: $primary-color__2;
+}
+
+.show-date {
+	font-weight: $font-weight-demi;
+}
+
+.show-value {
+	padding-top: 0;
+}
+
+.shows__header-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	h2 {
+		width: 100%;
+		@include tablet {
+			width: 20%;
+		}
+	}
+}
+
+.shows-container {
+	display: flex;
+	align-items: end;
+    flex-direction: column;
+	padding: 0;
+}
+
+.show-item {
+	border-bottom: solid 1px $secondary-color__2;
+	width: 100%;
+	@include tablet {
+		padding: 1rem;
+		display: flex;
+		width: calc(80% - 2rem);
+	}
+}
+
+.show-item:hover {
+	background-color: $secondary-color__3;
+}
+
+.show-item.show-item__selected {
+	background-color: $secondary-color__2;
+}
+
+.show-item div {
+	@include tablet {
+		width: 25%;
+	}
+}
+
+.show-table-header {
+	padding: 1rem;
+	width: 80%;
+}
+
+.show-table-header .show-label {
+	width: 25%;
+}
+
+.show-table-header {
+	display: none;
+
+	@include tablet {
+		display: flex;
+	}
+}
+
+.show-item .show-label {
+	@include tablet {
+		display: none;
+	}
+}

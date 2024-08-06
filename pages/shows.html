@@ -6,44 +6,81 @@
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="../styles/shows.css">
       <title>Bandsite - Biography</title>
+      <script src="../scripts/build-shows-page.js" defer></script>
    </head>
 
    <body>
     <header>
         <div class="header section__content">
            <div class="logo">
-              <img alt="bandsite logo" src="assets/Logo/Logo-bandsite.svg">
+              <img alt="bandsite logo" src="../assets/Logo/Logo-bandsite.svg">
            </div>
            <nav>
-              <a class="main-link" href="index.html">Biography</a>
-              <a href="pages/shows.html">Shows</a>
+              <a href="../index.html">Biography</a>
+              <a class="main-link" href="./shows.html">Shows</a>
            </nav>
         </div>
      </header>
      <section class="cover__container">
         <div class="overlay">
            <div class="section__content">
-               <h1 class="cover__text">
-               The Bees Knees
-               </h1>
+               <div class="dp-flex">
+                  <h1 class="cover__text">
+                     The Bees Knees
+                  </h1>
+                  <div class="soundcloud">
+                     <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/41899071&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/badbadnotgood" title="BADBADNOTGOOD" target="_blank" style="color: #cccccc; text-decoration: none;">BADBADNOTGOOD</a> · <a href="https://soundcloud.com/badbadnotgood/earl-feat-leland-whitty" title="Earl (Feat. Leland Whitty)" target="_blank" style="color: #cccccc; text-decoration: none;">Earl (Feat. Leland Whitty)</a></div>
+                  </div>
+               </div>
            </div>
         </div>
      </section>
-     <section class="ticketing">
-     <div class="new-comment">
-        <div class="form-field__name">
-           <p>NAME</p>
-        </div>
-
-        <input class="name__input" placeholder="Enter your name">
-
-        <div class=form-field__comment>
-           <p>COMMENT</p>
-        </div>
-        <textarea class="comment__input" rows= "6" placeholder="Add your comment"></textarea>
-        <div>
-           <button>COMMENT</button>
-        </div>
-    </div>
-     </div>
+      <section class="shows__container">
+         <div class="section__content"></div>
+     </section>
+     <footer class="footer-style">
+         <div class="section__content">
+            <div class="footer-start">
+               <div class="contact">
+                  <h2>
+                     Get in Touch
+                  </h2>
+                  <div class="socials">
+                     <img alt="facebook logo" class="icons" src="../assets/Icons/Icon-facebook.svg">
+                     <img alt="instagram logo" class="icons" src="../assets/Icons/Icon-instagram.svg">
+                     <img alt="twitter logo" class="icons" src="../assets/Icons/Icon-twitter.svg">
+                  </div>
+               </div>
+               <div class="logo">
+                  <img alt="bandsite logo" src="../assets/Logo/Logo-bandsite.svg"/>
+               </div>
+            </div>
+            <div class="booking-links">
+               <div>
+                  <p class="booking-title">The Bees Knees Management</p>
+                  <p>503 Broadway Penthouse, <br/> New York, NY 10012, USA</p>
+                  <a href="mailto:info@thebeesknees.com">info@thebeesknees.com</a>
+               </div>
+               <div>
+                  <p class="booking-title">Limitless Artist Group</p>
+                  <p>Booking Agent for <br/> US / South America / Japan</p>
+                  <a href="mailto:bookings@limitlessag.com">bookings@limitlessag.com</a>
+               </div>
+               <div>
+                  <p class="booking-title">ARCH Entertainment</p>
+                  <p>Booking Agent for <br/> UK / EU / AU</p>
+                  <a href="mailto:bookings@archentertainment.com">bookings@archentertainment.com</a>
+               </div>
+            </div>
+            <div class="footer-end">
+               <div class="logo">
+                  <img alt="bandsite logo" src="../assets/Logo/Logo-bandsite.svg"/>
+               </div>
+               <p>
+                  Copyright The Bees Knees © 2023 All Rights Reserved
+               </p>
+            </div>
+         </div>
+      </footer>
    </body>
+</html>

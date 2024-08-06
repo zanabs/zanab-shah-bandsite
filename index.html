@@ -6,7 +6,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="./styles/bio.css">
       <title>Bandsite - Biography</title>
-      <script src="script.js" defer></script>
+      <script src="./scripts/index-page.js" defer></script>
    </head>
    <body>
     <header>
@@ -103,90 +103,33 @@
 
 
       <section class="comments">
-         <form class="comments__form" action="url" method="">
-            <h2>Join the Conversation</h2>
-
+         <div class="section__content">
+            <form class="comments__form">
+               <h2>Join the Conversation</h2>
+   
                <div class="new-comment__container">
                      <div>
                         <img class="avatar" src="assets/Images/Mohan-muruge.jpg">
                      </div>
                      <div class="new-comment">
-                        <div class="name-field">
+                        <div class="form-field__name">
                            <p>NAME</p>
                         </div>
          
-                        <input class="name-field__input" name="username" placeholder="Enter your name">
+                        <input class="name__input" name="name" placeholder="Enter your name">
          
                         <div class=form-field__comment>
                            <p>COMMENT</p>
                         </div>
-                        <textarea class="comment-field__input" name="comment"rows= "6" placeholder="Add your comment"></textarea>
-                        <div>
-                           <button type="submit" name="submit-button">COMMENT</button>
+                        <textarea class="comment__input" name="comment"rows= "6" placeholder="Add your comment"></textarea>
+                        <div class="new-comment__button">
+                           <button type="submit">COMMENT</button>
                         </div>
                      </div>
-
+   
                </div>
-         </form>
-
-               <div class="comment-card__container">
-                  <div class="avatar-placeholder">
-                  </div>
-                  <div class="comment-card__text">
-                     <div class="name__timestamp">
-                        <h4>Victor Pinto</h4>
-                        <p>11/02/2023</p>
-                     </div>
-                     <div class="comment-text">
-                        <p>This is art. This is inexplicable magic
-                           expressed in the purest way, everything
-                           that makes up this majestic work
-                           deserves reverence. Let us appreciate
-                           this for what it is and what it contains.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               
-               
-             
-               <div class="comment-card__container">
-                  <div class="avatar-placeholder">
-                  </div>
-                  <div class="comment-card__text">
-                     <div class="name__timestamp">
-                        <h4>Christina Cabrera</h4>
-                        <p>10/28/2023</p>
-                     </div>
-                     <div class="comment-text">
-                        <p>I feel blessed to have seen them in
-                           person. What a show! They were just
-                           perfection. If there was one day of my
-                           life I could relive, this would be it. What
-                           an incredible day.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="comment-card__container">
-                  <div class="avatar-placeholder">
-                  </div>
-                  <div class="comment-card__text">
-                     <div class="name__timestamp">
-                        <h4>Isaac Tadesse</h4>
-                        <p>10/20/2023</p>
-                     </div>
-                     <div class="comment-text">
-                        <p>I can't stop listening. Every time I hear
-                           one of their songs the vocals it gives
-                           me goosebumps. Shivers straight down
-                           my spine. What a beautiful expression of
-                           creativity. Can't get enough.
-                        </p>
-                     </div>
-                  </div>
-               </div>
+            </form>
+            <div class="comments-container"></div>
          </div>
       </section>
 

@@ -1,6 +1,6 @@
-@use './partials/mixins.scss' as *;
-@use './partials/variables.scss' as *;
 @use './partials/global.scss' as *;
+@use './partials/variables.scss' as *;
+@use './partials/mixins.scss' as *;
 
 h1 {
 	@include typography__page-header;
@@ -157,15 +157,6 @@ footer {
 	}
 }
 
-footer {
-	@include header-footer-background;
-	color: white;
-
-	h2 {
-		color: white;
-	}
-}
-
 .footer-start {
 	@include tablet {
 		display: flex;
@@ -233,6 +224,18 @@ footer {
 	@include new-comment__container;
 }
 
+.new-comment {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.new-comment__button {
+	display: flex;
+    justify-content: end;
+	margin: 1rem 0;
+}
+
 .form-field__name {
 	@include field-form__label;
 	margin-top:0%;
@@ -241,7 +244,6 @@ footer {
 .name__input {
 	@include field-form__input;
 	padding: 10px;
-	
 }
 
 input::placeholder {
@@ -262,30 +264,12 @@ textarea::placeholder {
 }
 .comment__input {
 	@include field-form__input;
-
 	padding:9px;
 }
 
 .avatar {
 	@include avatar;
 	margin: $between-components;
-}
-
-.new-comment {
-	@include new-comment;
-}
-
-button {
-	@mixin button {
-		color: $primary-color__3;
-		background-color: $secondary-color__1;
-		border: solid 1px $secondary-color__1;
-		border-radius: 10px;
-		margin: 1rem 0rem;
-		padding: 5%;
-		width: 100%;
-	
-	}
 }
 
 

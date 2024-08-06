@@ -1,18 +1,9 @@
 @use './variables.scss' as *;
+@use './mixins.scss' as *;
+
 body {
     margin:0%;
     font-family: $font-regular;
-}
-
-@mixin button {
-	color: $primary-color__3;
-	background-color: $secondary-color__1;
-	border: solid 1px $secondary-color__1;
-	border-radius: 10px;
-	margin: 1rem 0rem;
-	padding: 5%;
-	width: 100%;
-
 }
 
 @mixin header-footer-background {
@@ -67,4 +58,21 @@ body {
     src: url(../assets/Font/AvenirNextLTPro-Bold.otf);
     src: url(../assets/Font/AvenirNextLTProBold.ttf) format("truetype");
     font-weight: 700;
+}
+
+button {
+	@include button;
+}
+
+footer {
+	@include header-footer-background;
+	color: white;
+
+	p {
+		color: white;
+	}
+
+	h2 {
+		color: white;
+	}
 }
