@@ -4,21 +4,7 @@ let commentField = document.getElementsByClassName("comment__input");
 
 
 let commentsArray = [
-    {
-        name:"Victor Pinto",
-        comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.", 
-        timestamp:"11/02/2023"
-    },
-    {
-        name:"Christina Cabrera",
-        comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-        timestamp:"10/28/2023"
-    },
-    {
-        name:"Isaac Tadesse",
-        comment: "I can't stop listening. Every time I hear one of their songs the vocals it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-        timestamp:"10/20/2023"
-    }
+  
 ]
 
 function addComment(newComment) {
@@ -74,7 +60,7 @@ function createCommentDOMElement(comment) {
 }
 
 
-
+/*
 commentsForm[0].addEventListener("submit", (event) => {
     
     event.preventDefault();
@@ -89,12 +75,11 @@ commentsForm[0].addEventListener("submit", (event) => {
         }
         addComment(newComment);
     }
-});
+});*/
 
 function printComments() {
     let commentsContainer = document.getElementsByClassName("comments-container");
 
-    
     commentsContainer[0].innerHTML = '';
 
     commentsArray.reverse();
@@ -106,3 +91,66 @@ function printComments() {
 }
 
 printComments();
+
+
+
+//use API to populate comments, shows
+
+
+const API_KEY="4b619585-4ee8-43f0-8390-31e316e5ad60"; 
+
+let populateAPI= new BandSiteApi(API_KEY);
+
+let populateComments = async () => {
+    try {
+        let retrievedComments = await populateAPI.getComments();
+        commentsArray = retrievedComments;
+        printComments();
+    } catch (error) {
+        console.log(error);
+    }
+
+
+}
+
+populateComments();
+
+let addPostedComment = async () => {
+    try {
+        let comment = 
+            {
+                name: nameField[0].value,
+                comment: commentField[0].value,
+
+            }
+
+        await populateAPI.postComment(comment);
+        populateComments();
+
+    }catch (error) {
+        console.log(error);
+    }
+}
+
+
+
+commentsForm[0].addEventListener("submit", (event) => {
+    
+    event.preventDefault();
+    if (nameField[0].value.length < 1 || commentField[0].value.length < 1) {
+        alert("please fill out all required fields");       
+    } else {
+        
+        addPostedComment();
+    }
+});
+
+
+
+
+
+
+
+
+
+
