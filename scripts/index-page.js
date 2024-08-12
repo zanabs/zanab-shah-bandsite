@@ -1,25 +1,14 @@
-let commentsForm = document.getElementsByClassName("comments__form");
-let nameField = document.getElementsByClassName("name__input");
-let commentField = document.getElementsByClassName("comment__input");
+let commentsForm = document.querySelector(".comments__form");
+let nameField = document.querySelector(".name__input");
+let commentField = document.querySelector(".comment__input");
 
 
 let commentsArray = [
   
 ]
 
-function addComment(newComment) {
-    
-    commentsArray.push(newComment); 
-
-    printComments();
-    resetInputFields();
-}
 
 
-function resetInputFields() {
-    nameField[0].value = '';
-    commentField[0].value = '';
-}
 
 function createCommentDOMElement(comment) {
     const commentCardContainerDiv = document.createElement('div');
@@ -31,6 +20,13 @@ function createCommentDOMElement(comment) {
 
     const commentCardTextDiv = document.createElement('div');
     commentCardTextDiv.classList = "comment-card__text";
+
+
+    const deleteButtonDiv=document.createElement('div');
+    deleteButtonDiv.classList="comment-card__delete-button-container";
+
+    const deleteButton=document.createElement('button');
+    deleteButton.classList="comment-card__delete-button";
 
     const commentNameTimestampDiv = document.createElement('div');
     commentNameTimestampDiv.classList = "name__timestamp";
@@ -51,41 +47,42 @@ function createCommentDOMElement(comment) {
     commentNameTimestampDiv.append(commentName);
     commentNameTimestampDiv.append(commentTimestamp);
     commentCardTextDiv.append(commentTextDiv);
+    commentCardTextDiv.append(deleteButtonDiv);
+    deleteButtonDiv.append(deleteButton);
     commentTextDiv.append(commentText);
 
+    
+    
+    deleteButton.innerText="DELETE";
     commentName.innerText = comment.name;
     commentTimestamp.innerText = new Date(comment.timestamp).toDateString();
+    
+
+    deleteButton.addEventListener("click", async () =>  {
+        console.log("this works")
+        try {
+        await populateAPI.deleteComment(comment.id);
+        populateComments();
+        }catch(error) {
+            console.log(error);
+        }
+    })
+
+
 
     return commentCardContainerDiv;
 }
 
 
-/*
-commentsForm[0].addEventListener("submit", (event) => {
-    
-    event.preventDefault();
-    if (nameField[0].value.length < 1 || commentField[0].value.length < 1) {
-        alert("please fill out all required fields");       
-    } else {
-        
-        let newComment= {
-            name: nameField[0].value,
-            comment: commentField[0].value,
-            timestamp: Date.now()
-        }
-        addComment(newComment);
-    }
-});*/
-
 function printComments() {
-    let commentsContainer = document.getElementsByClassName("comments-container");
+    let commentsContainer = document.querySelector(".comments-container");
 
-    commentsContainer[0].innerHTML = '';
+    commentsContainer.innerHTML = '';
 
     commentsArray.reverse();
     for (let i = 0; i < commentsArray.length; i++){
         const newCommentContainer = createCommentDOMElement(commentsArray[i]);
-        commentsContainer[0].append(newCommentContainer);
+        commentsContainer.append(newCommentContainer);
     }
     commentsArray.reverse();
 }
@@ -119,8 +116,8 @@ let addPostedComment = async () => {
     try {
         let comment = 
             {
-                name: nameField[0].value,
-                comment: commentField[0].value,
+                name: nameField.value,
+                comment: commentField.value,
 
             }
 
@@ -134,16 +131,18 @@ let addPostedComment = async () => {
 
 
 
-commentsForm[0].addEventListener("submit", (event) => {
+commentsForm.addEventListener("submit", (event) => {
     
     event.preventDefault();
-    if (nameField[0].value.length < 1 || commentField[0].value.length < 1) {
+    if (nameField.value.length < 1 || commentField.value.length < 1) {
         alert("please fill out all required fields");       
     } else {
         
         addPostedComment();
+        commentsForm.reset();
     }
 });
+
 
 
 

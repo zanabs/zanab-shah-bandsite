@@ -461,7 +461,9 @@ nav .navigation__link:hover {
   background-color: #fafafa;
   border: solid 1px #afafaf;
   border-radius: 10px;
+  resize: none;
   padding: 9px;
+  font-family: "AvenirNext";
 }
 
 .avatar {
@@ -528,6 +530,12 @@ nav .navigation__link:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.comment-card__delete-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .cover-container--bio {

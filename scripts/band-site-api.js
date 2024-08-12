@@ -29,7 +29,15 @@ class BandSiteApi {
             method: 'get',
             url: this.baseURL + 'showdates?api_key=' + this.apiKey
         });
-        
+
+        return response.data;
+    }
+
+    async deleteComment(id) {
+        const response = await axios({
+            method: 'delete',
+            url: this.baseURL + 'comments/' + id + '?api_key=' + this.apiKey,
+        })
         return response.data;
     }
 }

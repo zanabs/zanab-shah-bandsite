@@ -119,7 +119,9 @@
 
 .comment__input {
 	@include field-form__input;
+	resize: none;
 	padding:9px;
+	font-family: $font-regular;
 }
 
 .avatar {
@@ -184,6 +186,13 @@
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+}
+
+.comment-card__delete-button-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	
 }
 
 

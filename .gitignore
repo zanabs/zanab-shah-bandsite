@@ -1,2 +1,3 @@
 styles/*.css.map
 *.code-workspace
+styles/partials/*.css.map
