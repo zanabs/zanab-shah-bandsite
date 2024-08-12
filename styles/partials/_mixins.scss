@@ -167,10 +167,23 @@
 	justify-content: flex-end;
 }
 
+@mixin align_flex-end {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
 @mixin justify_left {
 	display: flex;
 	flex-direction: row;
 	justify-content: left;
+}
+
+@mixin center-center {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 }
 
 //

@@ -29,9 +29,7 @@
 }
 
 .shows__header-container {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	@include center-center;
 
 	h2 {
 		width: 100%;
@@ -42,9 +40,7 @@
 }
 
 .shows-container {
-	display: flex;
-	align-items: end;
-    flex-direction: column;
+	@include align_flex-end;
 	padding: 0;
 }
 
