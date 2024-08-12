@@ -1,3 +1,4 @@
+/* flexbox dimensions */
 @font-face {
   font-family: AvenirNext;
   src: url(../assets/Font/AvenirNextLTPro-Regular.otf) format("opentype");
@@ -118,13 +119,13 @@ button {
 
 footer {
   background-color: #323232;
-  color: white;
+  color: #ffffff;
 }
 footer p {
-  color: white;
+  color: #ffffff;
 }
 footer h2 {
-  color: white;
+  color: #ffffff;
 }
 
 .footer {
@@ -136,11 +137,16 @@ footer h2 {
   font-size: 1.1rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+.contact h1 {
+  padding: 0%;
 }
 .contact .footer__socials {
   display: flex;
   flex-direction: row;
   justify-content: left;
+  align-items: center;
   gap: 16px;
 }
 .contact .footer__socials .icons {
@@ -152,7 +158,7 @@ footer h2 {
   .contact {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: center;
     gap: 50px;
   }
 }
@@ -247,12 +253,6 @@ textarea::placeholder {
   font-family: "AvenirNext";
   text-align: left;
   padding: 0%;
-}
-
-.dp-flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 .logo {
@@ -420,7 +420,8 @@ nav .navigation__link:hover {
 
 .new-comment__button {
   display: flex;
-  justify-content: end;
+  flex-direction: row;
+  justify-content: flex-end;
   margin: 1rem 0;
 }
 
@@ -441,6 +442,7 @@ nav .navigation__link:hover {
   background-color: #fafafa;
   border: solid 1px #afafaf;
   border-radius: 10px;
+  font-family: "AvenirNext";
   padding: 10px;
 }
 
@@ -461,9 +463,9 @@ nav .navigation__link:hover {
   background-color: #fafafa;
   border: solid 1px #afafaf;
   border-radius: 10px;
+  font-family: "AvenirNext";
   resize: none;
   padding: 9px;
-  font-family: "AvenirNext";
 }
 
 .avatar {

@@ -19,10 +19,7 @@
 }
 
 .gallery__photos {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: space-between;
+	@include row-wrap_align-spacebetween;
 	gap: 16px;
 
 	@include tablet {
@@ -44,8 +41,7 @@
 }
 
 .intro-paragraph {
-	display: flex;
-	flex-wrap: wrap;
+	@include flex-wrap;
 	gap: 2rem;
 
 	p {
@@ -74,9 +70,7 @@
 }
 
 .new-comment {
-	display: flex;
-	flex-direction: row;
-	justify-content: left;
+	@include justify_left;
 	gap: 1rem;
 	border-bottom: solid 1px $secondary-color__2;
 	margin-top: 0px;
@@ -91,14 +85,12 @@
 }
 
 .new-comment__container {
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     width: 100%;
 }
 
 .new-comment__button {
-	display: flex;
-    justify-content: end;
+	@include justify_flex-end;
 	margin: 1rem 0;
 }
 
@@ -121,7 +113,7 @@
 	@include field-form__input;
 	resize: none;
 	padding:9px;
-	font-family: $font-regular;
+
 }
 
 .avatar {
@@ -134,9 +126,7 @@
 }
 
 .comment-card__container {
-	display:flex;
-	flex-direction: row;
-	justify-content: space-between;
+	@include row-spacebetween;
 	gap: 1rem;
 	border-bottom: solid 1px $secondary-color__2;
 	margin-top: 28px;
@@ -160,9 +150,7 @@
 }
 
 .name__timestamp {
-	display:flex;
-	flex-direction: row;
-	justify-content: space-between;
+	@include row-spacebetween;
 	gap: 2rem;
 	padding: 0;
 
@@ -183,15 +171,13 @@
 }
 
 .comment-card__text {
-	display: flex;
-	flex-direction: column;
+	@include flex-column;
 	width: 100%;
 }
 
 .comment-card__delete-button-container {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
+
+	@include row_flex-end;
 	
 }
 

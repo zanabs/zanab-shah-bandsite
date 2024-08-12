@@ -52,9 +52,9 @@ header {
 }
 
 .header {
-	@include flex-col-center;
+	@include column-center;
 	@include tablet {
-		@include flex-row-center;
+		@include row-center;
 
 		.logo {
 			padding: 0% 5%;
@@ -89,14 +89,14 @@ button {
 
 footer {
 	background-color: $primary-color__1;
-	color: white;
+	color: $primary-color__3;
 
 	p {
-		color: white;
+		color: $primary-color__3;
 	}
 
 	h2 {
-		color: white;
+		color: $primary-color__3;
 	}
 }
 
@@ -107,13 +107,15 @@ footer {
 .contact {
 	font-family: $font-regular;
 	font-size: $subheader__mobile;
-	display: flex;
-	flex-direction: column;
+	@include column-center;
 
+	h1 {
+		padding: 0%;
+	}
+		
 	.footer__socials {
-		display: flex;
-		flex-direction: row;
-		justify-content: left;
+		@include justify_left;
+		align-items: center;
 		gap: 16px;
 
 		.icons {
@@ -124,11 +126,10 @@ footer {
 	}
 
 	@include tablet {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
+		@include row-center;
 		gap: 50px;
 	}
+
 }
 
 .footer__links {
@@ -214,11 +215,7 @@ textarea::placeholder {
 	padding: 0%;
 }
 
-.dp-flex {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-}
+
 
 .logo {
 	max-width: 7.5rem;
