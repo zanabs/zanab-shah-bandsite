@@ -107,7 +107,7 @@ footer {
 .contact {
 	font-family: $font-regular;
 	font-size: $subheader__mobile;
-	@include column-center;
+	@include flex-column;
 
 	h1 {
 		padding: 0%;
@@ -115,6 +115,7 @@ footer {
 		
 	.footer__socials {
 		@include justify_left;
+		padding-top: 7%;
 		align-items: center;
 		gap: 16px;
 
