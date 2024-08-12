@@ -230,8 +230,7 @@ textarea::placeholder {
 }
 
 nav {
-	display: flex;
-	flex-direction: row;
+	@include flex-row;
 	background-color: $primary-color__1;
 	width: 100%;
 	color: $secondary-color__2;
